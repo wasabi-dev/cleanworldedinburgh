@@ -33,6 +33,14 @@ article.description {
 article.description p{
   color: rgb(49, 49, 49);
 }
+#banner{
+  height: 20em;
+  width: 100%;
+}
+#banner img{
+  max-width: 100%;
+  object-fit: fill;
+}
 /* ==============================================================
    GLOBAL STYLES
    ============================================================== */

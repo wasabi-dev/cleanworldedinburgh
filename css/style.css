@@ -21,6 +21,11 @@ Author: Surjith S M
 /* ==========================================================================
    Color
    ========================================================================== */
+   /********colores
+   verde claro: #83c554
+   verde oscuro: #046838 
+   botone en hover: #96e65d
+   *******/
 /*******My styles********/
 article.description {
   margin: 5em;
@@ -254,14 +259,14 @@ header {
   color: #45c3d3; }
 
 .btn-info {
-  background: #45c3d3;
-  border: 2px solid #2ea8b7;
+  background: #83c554;
+  border: 2px solid #046838;
   padding: 9px 33px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s; }
   .btn-info:hover {
-    background: #2fb2c3; }
+    background: #96e65d; }
 
 .input-group-addon {
   padding: .5rem 0.15rem; }
@@ -331,9 +336,10 @@ COUNDOWN TIMER
 /* ==============================================================
    SLIDER
    ============================================================== */
+   
 .slider {
   position: relative;
-  background: url(../images/landing-img.jpg) no-repeat;
+  background: url(../imagenes/banner.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   padding: 10rem 0; }
@@ -420,9 +426,9 @@ COUNDOWN TIMER
   font-size: 30px;
   padding: 17px;
   width: 32%;
-  background: #45c3d3;
+  background: #83c554;
   color: #ffffff;
-  border: solid 1px #2ea8b7;
+  border: solid 1px #046838;
   cursor: pointer; }
   .btn-form:focus {
     outline: none; }

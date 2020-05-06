@@ -41,6 +41,15 @@ article.description p{
   max-width: 100%;
   object-fit: fill;
 }
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffffbd;
+  box-shadow: 1px 1px 3px gray;
+  transition: padding 300ms ease;
+}
+
 /* ==============================================================
    GLOBAL STYLES
    ============================================================== */

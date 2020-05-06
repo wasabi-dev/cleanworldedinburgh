@@ -276,7 +276,7 @@ header {
   color: #45c3d3; }
 
 .btn-info {
-  background: #83c554;
+  background: #45d397;
   border: 2px solid #046838;
   padding: 9px 33px;
   -webkit-transition: 0.3s;
@@ -879,7 +879,7 @@ figure.effect-lily:hover p {
    FOOTER
    ============================================================== */
 footer {
-  background: #45c3d3;
+  background: #45d397;
   padding: 50px 0; }
 
 @media (max-width: 768px) {

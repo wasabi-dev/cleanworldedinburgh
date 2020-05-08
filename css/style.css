@@ -384,6 +384,7 @@ header {
   padding: 9px 33px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  border-color: #208a71;
 }
 
 .btn-info:hover {

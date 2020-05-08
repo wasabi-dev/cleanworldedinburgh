@@ -29,6 +29,7 @@ Author: Surjith S M
    $color1:#2ce6a9;
    $color2:#358474;
    $colorhover:#358474;
+   $bordecitos:#208a71;
 /*******My styles********/
 article.description {
   margin: 5em;
@@ -306,7 +307,8 @@ header {
   padding: 9px 33px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
-  transition: 0.3s; }
+  transition: 0.3s;
+  border-color: $bordecitos;}
   .btn-info:hover {
     background: $colorhover; }
 

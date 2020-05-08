@@ -35,17 +35,6 @@ article.description p {
   color: #313131;
 }
 
-#banner {
-  height: 20em;
-  width: 100%;
-}
-
-#banner img {
-  max-width: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
-}
-
 .header {
   position: -webkit-sticky;
   position: sticky;
@@ -54,6 +43,57 @@ article.description p {
   background-color: #ffffffbd;
   -webkit-box-shadow: 1px 1px 3px gray;
           box-shadow: 1px 1px 3px gray;
+}
+
+#banner {
+  width: 100%;
+  background-image: url(../imagenes/office-1966380_1920.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#banner h1 {
+  padding: 1em;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact {
+  width: 80%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+p.textcontact {
+  padding: 1em;
+  text-align: center;
+  font-size: 1em;
+  color: #3a3a3a;
 }
 
 /* ==============================================================
@@ -2205,7 +2245,7 @@ footer {
 
 .terms-reminder label {
   color: #ccc span a;
-  color-color: #45c3d3;
+  color: #45c3d3;
 }
 
 .complete-booking {

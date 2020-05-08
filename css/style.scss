@@ -36,14 +36,7 @@ article.description {
 article.description p{
   color: rgb(49, 49, 49);
 }
-#banner{
-  height: 20em;
-  width: 100%;
-}
-#banner img{
-  max-width: 100%;
-  object-fit: fill;
-}
+
 .header{
   position: sticky;
   top: 0;
@@ -52,6 +45,36 @@ article.description p{
   box-shadow: 1px 1px 3px gray;
   
 }
+#banner{
+  width: 100%;
+  background-image: url(../imagenes/office-1966380_1920.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+#banner{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#banner h1{
+  padding: 1em;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact{
+  width: 80%;
+  align-self: center;
+}
+p.textcontact{
+  padding: 1em;
+  text-align: center;
+  font-size: 1em;
+  color: rgb(58, 58, 58);
+}
+
 
 /* ==============================================================
    GLOBAL STYLES
@@ -1640,7 +1663,7 @@ footer {
 
 .terms-reminder label {
   color: #ccc span a;
-    color-color: #45c3d3; }
+  color: #45c3d3; }
 
 .complete-booking {
   background: #88ce43;

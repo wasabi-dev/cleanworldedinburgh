@@ -18,6 +18,7 @@ Author: Surjith S M
 /* ==========================================================================
    Font
    ========================================================================== */
+   @import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,300;1,200&display=swap');
 /* ==========================================================================
    Color
    ========================================================================== */
@@ -60,6 +61,18 @@ article.description p{
 #banner h1{
   padding: 1em;
 }
+#banner-ozone{
+   width: 100%;
+  background-image: url(../imagenes/ozone-clean.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#banner-ozone h1{
+  padding:1em;
+}
 .form{
   display: flex;
   flex-direction: column;
@@ -75,7 +88,32 @@ p.textcontact{
   font-size: 1em;
   color: rgb(58, 58, 58);
 }
-
+.blog{
+  padding-top: 2em;
+  text-align: center;
+}
+article{
+  padding: 2em;
+  padding-right: 3em;
+  padding-left: 3em;
+}
+article p{
+  font-family: 'Muli', sans-serif;
+  font-size: 1em;
+  color: black;
+  text-align: justify;
+}
+article img{
+  width: 350px;
+  height: auto;
+  padding: 2em;
+}
+.call-action{
+  padding-bottom: 2em;
+}
+.call-action h3{
+  line-height: 1.5;
+}
 
 /* ==============================================================
    GLOBAL STYLES

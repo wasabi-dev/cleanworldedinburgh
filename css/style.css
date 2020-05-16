@@ -155,6 +155,16 @@ article img {
   line-height: 1.8;
 }
 
+.content-ozono {
+  padding-top: 2em;
+}
+
+.content-ozono img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 30em;
+}
+
 /* ==============================================================
    GLOBAL STYLES
    ============================================================== */

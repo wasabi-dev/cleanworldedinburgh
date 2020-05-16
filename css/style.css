@@ -150,6 +150,11 @@ article img {
   line-height: 1.5;
 }
 
+.service-link p {
+  padding-top: 1em;
+  line-height: 1.8;
+}
+
 /* ==============================================================
    GLOBAL STYLES
    ============================================================== */
@@ -410,7 +415,7 @@ h6 {
 
 p {
   font-size: 15px;
-  color: #8b9aab;
+  color: #424344;
 }
 
 .main-block {
@@ -1164,7 +1169,7 @@ figure.effect-lily:hover p {
 }
 
 .service-link ul li a {
-  color: #8b9aab;
+  color: #5f6164;
   line-height: 2.6;
   pointer-events: all;
   -webkit-transition: 0.2s;

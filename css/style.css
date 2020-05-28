@@ -67,10 +67,6 @@ article.description p {
       touch-action: manipulation;
 }
 
-li.animate__bounceIn {
-  --animation-repeat: 4;
-}
-
 #banner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -921,10 +917,11 @@ COUNDOWN TIMER
 .howit-wrap span {
   font-size: 130px;
   color: #2ce6a9;
+  padding-bottom: 0.2em;
 }
 
 .howit-wrap h4 {
-  padding: 32px 12px 0;
+  padding: 0px 12px 0;
 }
 
 .howit-wrap p {

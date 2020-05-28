@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/pe-icon-7-stroke.css">
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -72,7 +72,7 @@
                         <h1>Clean and Safe</h1>
                         <h3>Book expert space cleaning and handymen at a moment's notice. Just pick a time and we’ll do the rest.</h3>
                             <div class="btn-group" role="group">
-                            <li class="animate__bounceIn"><a href="book-clean.html" class="btn-front">Book a Cleaning</a></li>
+                            <li><a href="book-clean.html" class="btn-front" data-aos="fade-up">Book a Cleaning</a></li>
                             </div>
                     </div>
                 </div>
@@ -90,21 +90,21 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="howit-wrap">
-                        <span class="pe-7s-date"></span>
+                    <div class="howit-wrap" data-aos="fade-up" data-aos-delay="100">
+                        <span class="pe-7s-date" id="btn-anim"></span>
                         <h4>Book a Cleaning</h4>
                         <p>Click the book now button to make a booking on your preffered date and time</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="howit-wrap">
+                    <div class="howit-wrap" data-aos="fade-up" data-aos-delay="300">
                         <span class="pe-7s-lock"></span>
                         <h4>Confirm Booking</h4>
                         <p>We will confirm your booking along with your instructions via secure transaction.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="howit-wrap">
+                    <div class="howit-wrap" data-aos="fade-up" data-aos-delay="500">
                         <span class="pe-7s-home"></span>
                         <h4>We’ll Clean it</h4>
                         <p>Our trusted & experienced maid will come to your door-step on the time for a cleaning</p>
@@ -124,7 +124,8 @@
                         Cleaning with ozone gives you the guarantee of a disinfected and clean space</h6>
                         <div class="row content-ozono">
                         <div class="col-md-6"> 
-                        <img src="./imagenes/ozono-clean-house.jpg" alt="">
+                        <img src="./imagenes/ozono-clean-house.jpg" alt="" 
+                        data-aos="fade-right" data-aos-offset="300" data-aos-easing="linear">
                         
                     </div>
                     <div class="col-md-6">
@@ -445,6 +446,10 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+            AOS.init();
+          </script>
     
 </body>
 

@@ -65,9 +65,7 @@ article.description p{
   border-radius: .25rem;
   touch-action: manipulation;
 }
-li.animate__bounceIn{
-  --animation-repeat: 4;
-}
+
 #banner{
   display: flex;
   flex-direction: row;
@@ -693,12 +691,15 @@ COUNDOWN TIMER
    ============================================================== */
 .howit-wrap {
   text-align: center;
-  margin: 70px 0 0; }
+  margin: 70px 0 0; 
+ }
   .howit-wrap span {
     font-size: 130px;
-    color: $color1; }
+    color: $color1;
+    padding-bottom: 0.2em;
+    }
   .howit-wrap h4 {
-    padding: 32px 12px 0; }
+    padding: 0px 12px 0; }
   .howit-wrap p {
     font-size: 15px;
     color: #8b9aab; }

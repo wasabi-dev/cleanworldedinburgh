@@ -53,6 +53,21 @@ article.description p{
   background-size: cover;
   background-attachment: fixed;
 }
+.slider-content .btn-front{
+  padding: 0.6em 2em;
+  font-weight: 600;
+  background: $color1;
+  border: 1px solid;
+  border-color: $bordecitos;
+  color:white;
+  font-size: 2rem;
+  line-height: 1.25;
+  border-radius: .25rem;
+  touch-action: manipulation;
+}
+li.animate__bounceIn{
+  --animation-repeat: 4;
+}
 #banner{
   display: flex;
   flex-direction: row;
@@ -485,7 +500,10 @@ COUNDOWN TIMER
       width: 100%; } }
 
 .btn-group {
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2em; }
   .btn-group input {
     border: 1px solid #e8e8e8; }
 

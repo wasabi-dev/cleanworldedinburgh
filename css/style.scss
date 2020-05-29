@@ -98,6 +98,7 @@ button.dropdown-toggle{
 .contact{
   width: 80%;
   align-self: center;
+  padding-bottom: 3em;
 }
 p.textcontact{
   padding: 1em;
@@ -126,10 +127,10 @@ article img{
   padding: 2em;
 }
 .call-action{
-  padding-bottom: 2em;
+  padding-bottom: 3em;
 }
 .call-action h3{
-  line-height: 1.5;
+  line-height: 2;
 }
 .service-link p{
       padding-top: 1em;
@@ -988,7 +989,6 @@ figure.effect-lily:hover p {
 footer {
   background: #45d397;
   padding: 40px 0; 
-  margin-top: 3em;
   p{
     color: white;
   }

@@ -160,6 +160,11 @@ article img{
   text-align: center;
   float: right;
   right: 5px;
+  transition-timing-function: linear;
+  transition-duration: 2s;
+  :hover{
+    transform: translateY(-20px);
+  }
 }
 
 /* ==============================================================
@@ -987,7 +992,11 @@ figure.effect-lily:hover p {
    ============================================================== */
 .booking {
   background: #f6fbfc;
-  border-top: 2px solid #d0f0f4; }
+  border-top: 2px solid #d0f0f4;
+  .row{
+    padding-bottom: 1em;
+  }  
+}
   .booking h6 {
     width: 55%; }
     @media (max-width: 992px) {

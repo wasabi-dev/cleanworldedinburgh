@@ -151,6 +151,21 @@ article img{
   padding-top: 2em;
 }
 
+.whatsapp{
+  display: block;
+  position: fixed;
+  padding:2em;
+  z-index: 20;
+  top:75%;
+  text-align: center;
+  float: right;
+  right: 5px;
+  transition-timing-function: linear;
+  transition-duration: 2s;
+  :hover{
+    transform: translateY(-20px);
+  }
+}
 
 /* ==============================================================
    GLOBAL STYLES
@@ -932,7 +947,11 @@ figure.effect-lily:hover p {
         pointer-events: all;
         -webkit-transition: 0.2s;
         -o-transition: 0.2s;
-        transition: 0.2s; }
+        transition: 0.2s; 
+      &.btn.btn-info{
+        color: white;
+      }
+    }
         .service-link ul li a:hover {
           padding-left: 10px;
           text-decoration: none; }
@@ -973,7 +992,11 @@ figure.effect-lily:hover p {
    ============================================================== */
 .booking {
   background: #f6fbfc;
-  border-top: 2px solid #d0f0f4; }
+  border-top: 2px solid #d0f0f4;
+  .row{
+    padding-bottom: 1em;
+  }  
+}
   .booking h6 {
     width: 55%; }
     @media (max-width: 992px) {

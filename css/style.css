@@ -200,6 +200,26 @@ article img {
   padding-top: 2em;
 }
 
+.whatsapp {
+  display: block;
+  position: fixed;
+  padding: 2em;
+  z-index: 20;
+  top: 75%;
+  text-align: center;
+  float: right;
+  right: 5px;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+
+.whatsapp :hover {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
 /* ==============================================================
    GLOBAL STYLES
    ============================================================== */
@@ -1229,6 +1249,10 @@ figure.effect-lily:hover p {
   transition: 0.2s;
 }
 
+.service-link ul li a.btn.btn-info {
+  color: white;
+}
+
 .service-link ul li a:hover {
   padding-left: 10px;
   text-decoration: none;
@@ -1280,6 +1304,10 @@ figure.effect-lily:hover p {
 .booking {
   background: #f6fbfc;
   border-top: 2px solid #d0f0f4;
+}
+
+.booking .row {
+  padding-bottom: 1em;
 }
 
 .booking h6 {

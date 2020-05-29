@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/pe-icon-7-stroke.css">
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -46,13 +47,14 @@
                                         <a class="dropdown-item" href="#team">Team</a>
                                       </div>
                                     </div>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact </a>
-                                </li>
+                                </li>    
                                 <li class="nav-item">
                                     <a class="nav-link" href="#ozone">Ozone Cleaning </a>
                                 </li>
-                                <li><a href="booking.html" class="btn btn-info">Book a Cleaning</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact </a>
+                                </li>
+                                <li><a href="book-clean.html" class="btn btn-info">Book a Quote</a></li>
                                 
                             </ul>
                         </div>
@@ -70,19 +72,16 @@
                     <div class="slider-content">
                         <h1>Clean and Safe</h1>
                         <h3>Book expert space cleaning and handymen at a moment's notice. Just pick a time and we’ll do the rest.</h3>
-                        <form class="form-wrap" action="booking.html">
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <input type="text" placeholder="Email Address" class="btn-group1">
-                                <input type="number" placeholder="Zip Code" class="btn-group2">
-                                <button type="submit" class="btn-form">Continue<i class="pe-7s-angle-right"></i></button>
+                            <div class="btn-group" role="group" data-aos="flip-up" data-aos-delay="2000" data-aos-easing="linear">
+                            <li><a href="book-clean.html" class="btn-front" >Book a Cleaning</a></li>
                             </div>
-                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!--//END SLIDER -->
+    <!--============================ HOW IT WORK ===============================-->
     <section class="howit-work main-block center-block" id="howitworks">
         <div class="container">
             <div class="row">
@@ -93,21 +92,21 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="howit-wrap">
-                        <span class="pe-7s-date"></span>
-                        <h4>Book a Cleaning</h4>
+                    <div class="howit-wrap" data-aos="fade-up" data-aos-delay="100">
+                        <span class="pe-7s-date" id="btn-anim"></span>
+                        <h4>Book a Quote</h4>
                         <p>Click the book now button to make a booking on your preffered date and time</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="howit-wrap">
+                    <div class="howit-wrap" data-aos="fade-up" data-aos-delay="300">
                         <span class="pe-7s-lock"></span>
                         <h4>Confirm Booking</h4>
                         <p>We will confirm your booking along with your instructions via secure transaction.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="howit-wrap">
+                    <div class="howit-wrap" data-aos="fade-up" data-aos-delay="500">
                         <span class="pe-7s-home"></span>
                         <h4>We’ll Clean it</h4>
                         <p>Our trusted & experienced maid will come to your door-step on the time for a cleaning</p>
@@ -117,7 +116,7 @@
         </div>
     </section>
     <!--//END HOW IT WORK -->
-    <!--============================= TESIMONIAL =============================-->
+    <!--============================ BANNER OZONO ============================-->
     <section class="testimonial main-block center-block" id="ozone">
         <div class="container">
             <div class="row">
@@ -127,7 +126,8 @@
                         Cleaning with ozone gives you the guarantee of a disinfected and clean space</h6>
                         <div class="row content-ozono">
                         <div class="col-md-6"> 
-                        <img src="./imagenes/coronavirus-dibujo.jpg" alt="">
+                        <img src="./imagenes/ozono-clean-house.jpg" alt="" 
+                        data-aos="fade-right" data-aos-offset="300" data-aos-easing="linear">
                         
                     </div>
                     <div class="col-md-6">
@@ -147,7 +147,7 @@
             </div>
         </div>
     </section>
-    <!--//END TESIMONIAL -->
+    <!--//END BANNER OZONO -->
     <!--============================= SERVICES =============================-->
     <section class="service-title" id="services">
         <div class="container">
@@ -163,7 +163,7 @@
   <div class="img-objectfit">
     <div class="grid">
       <figure class="effect-lily">
-        <img src="imagenes/office-1966380_1920.jpg" class="img-fluid" alt="#">   
+        <img src="imagenes/clean-office.jpg" class="img-fluid" alt="#">   
       </figure>
     </div> 
   </div>
@@ -219,7 +219,7 @@
         <div class="img-objectfit_1">
             <div class="grid">
                 <figure class="effect-lily">
-                    <img src="imagenes/home-3429674_1920.jpg" class="img-fluid" alt="#">
+                    <img src="imagenes/cleaning-livingroom.jpg" class="img-fluid" alt="#">
                 </figure>
             </div>
         </div>
@@ -303,13 +303,20 @@
                 <div class="col-md-6">
                     <div class="service-link" id="fleet">
                         <h3>Cleaning  <span>Fleet</span></h3>
+                        <p>Your business is on the road and the roads are a dirty place. 
+                            Our main business is fleet cleaning and we pride ourselves on the outstanding 
+                            service we provide to our customers. There are two option to clean your fleet;
+                            One: Do it yourself and use up valuable time.
+                            Two: Bring in our professional and experienced crew and experience the benefit of using Clean World.
+                            Call us today to get more information and let us know how we can specifically help your fleet 
+                            and business gleaming.</p>
                         <ul>
-                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Wash and sanitize toilet, shower and sink</a></li>
-                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Dust and wipe all reachable surfaces</a></li>
-                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Wipe door handles and light switches</a></li>
-                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Wipe mirrors and glass fixtures</a></li>
-                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Vacuum and mop all floors</a></li>
-                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Take out trash and recyclables</a></li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Your Vehicles Work Longer</a></li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Your Vehicles Sparkle</a></li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Onsite Service</a></li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Time Convinience</a></li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Interior Valet</a></li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Customize the clean for your needs</a></li>
                         </ul>
                     </div>
                 </div>
@@ -322,14 +329,14 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="service-link service-link1">
-                    <h3>Great Team <span>Retail</span></h3>
+                    <h3>Great <span>Team</span></h3>
+                    <p>From a humble beginning of cleaning tour coaches Francisco's (founder) standard of cleaning and reputation gained him further contracts and offers, the business has only ever grown organically with referrals. Clean World employed like minded hard working people and we are looking to reach even more customers to provide a better cleaning service to more of Edinburgh..</p>
                     <ul>
                         <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Well trained, friendly and helpful staff</a></li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Dust and wipe all reachable surfaces</a></li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Wipe door handles and light switches</a></li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Managed cover for holidays and unplanned absences</a></li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Vacuum and mop all floors</a></li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Take out trash and recyclables</a></li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Hard working staff</a></li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Committed to the quality of work</a></li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Personalized service</a></li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">We seek to provide the best service in Edinburgh</a></li>
                     </ul>
                 </div>
             </div>
@@ -373,59 +380,29 @@
     <footer>
         <div class="container">
             <div class="row mb-5">
-                <div class="col-md-2">
-                    <div class="foot-box">
-                        <h6>QUICK LINKS</h6>
-                        <ul>
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Press</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="foot-box">
-                        <h6>LEGAL STUFF</h6>
-                        <ul>
-                            <li>Terms of use</li>
-                            <li>Cookies</li>
-                            <li>Privacy Policy</li>
-                            <li>Security Policy</li>
-                            <li>Money back Guarantee</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3 objetfit">
+                <div class="col-md-6 objetfit">
                     <div class="foot-box">
                         <h6>About Clean World</h6>
-                        <img src="imagenes/Francisco-2.jpeg" class="img" height="170">
+                        <img src="imagenes/logo.png" class="img" height="auto" width="250px">
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="subscribe">
-                        <h6>SUBSCRIBE</h6>
-                        <form class="form-inline" action="booking.html">
-                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <input type="email" class="form-control subscribe-form" id="inlineFormInputGroup" placeholder="Enter your email">
-                                <button type="submit" class="input-group-addon subscribe-btn"><span class="pe-7s-angle-right"></span></button>
-                            </div>
-                        </form>
-                        <div class="social-icons">
-                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                        </div>
+                <div class="col-md-6">
+                    <div class="foot-box">
+                        <h6>Get to Know Us</h6>
+                        <p> We are a cleaning company in Edinburgh. Cleaning in offices, commercial and domestic. 
+                            Cleaning and disinfection of cars and fleets.
+                            Disinfection with Ozone. We adapt to your needs to provide the best service
+
+                        </p>
                     </div>
                 </div>
+                
             </div>
             <hr>
             <div class="row">
                 <div class="col-md-12">
                     <div class="copyright">
-                        <a href="#">&copy; 2020 Wasabi. All rights reserved</a>
+                        <a href="https://wasabidev.com.ar">&copy; 2020 Wasabi. All rights reserved</a>
                     </div>
                 </div>
             </div>
@@ -439,6 +416,10 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+            AOS.init();
+          </script>
     
 </body>
 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cleanworld Edinburg Administration</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="./admin/assets/demo.css">
+</head>
+<body>
+   <div class="wrapperbox fadeInDown">
+    <div id="formContent">
+    <!-- Se va a procesar en login.php y se enviará por POST, no por GET-->
+    <form action="./admin/login.php" method="post">
+        
+        <input name="usuario" type="text" class="fadeIn second" placeholder="Escribe tu nombre de usuario">
+        <br><br>
+        <input name="palabra_secreta" class="fadeIn third" type="password" placeholder="Contraseña">
+        <br><br>
+        <!--Lo siguiente envía el formulario-->
+        <input type="submit" value="Iniciar sesión">
+    </form>
+</div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

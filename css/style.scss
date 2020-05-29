@@ -47,12 +47,29 @@ article.description p{
   box-shadow: 1px 1px 3px gray;
   
 }
+button.dropdown-toggle{
+     color:#3f4b5e;
+     background-color: #ffffff1c;
+}
 #banner{
   width: 100%;
-  background-image: url(../imagenes/office-1966380_1920.jpg);
+  background-image: url(../imagenes/service-cleaning-office.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
+.slider-content .btn-front{
+  padding: 0.6em 2em;
+  font-weight: 600;
+  background: $color1;
+  border: 1px solid;
+  border-color: $bordecitos;
+  color:white;
+  font-size: 2rem;
+  line-height: 1.25;
+  border-radius: .25rem;
+  touch-action: manipulation;
+}
+
 #banner{
   display: flex;
   flex-direction: row;
@@ -81,6 +98,7 @@ article.description p{
 .contact{
   width: 80%;
   align-self: center;
+  padding-bottom: 3em;
 }
 p.textcontact{
   padding: 1em;
@@ -109,10 +127,10 @@ article img{
   padding: 2em;
 }
 .call-action{
-  padding-bottom: 2em;
+  padding-bottom: 3em;
 }
 .call-action h3{
-  line-height: 1.5;
+  line-height: 2;
 }
 .service-link p{
       padding-top: 1em;
@@ -125,6 +143,14 @@ article img{
   object-fit: cover;
   width: 30em;
 }
+.bloque{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-top: 2em;
+}
+
 
 /* ==============================================================
    GLOBAL STYLES
@@ -484,7 +510,10 @@ COUNDOWN TIMER
       width: 100%; } }
 
 .btn-group {
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2em; }
   .btn-group input {
     border: 1px solid #e8e8e8; }
 
@@ -674,12 +703,15 @@ COUNDOWN TIMER
    ============================================================== */
 .howit-wrap {
   text-align: center;
-  margin: 70px 0 0; }
+  margin: 70px 0 0; 
+ }
   .howit-wrap span {
     font-size: 130px;
-    color: $color1; }
+    color: $color1;
+    padding-bottom: 0.2em;
+    }
   .howit-wrap h4 {
-    padding: 32px 12px 0; }
+    padding: 0px 12px 0; }
   .howit-wrap p {
     font-size: 15px;
     color: #8b9aab; }
@@ -956,7 +988,11 @@ figure.effect-lily:hover p {
    ============================================================== */
 footer {
   background: #45d397;
-  padding: 50px 0; }
+  padding: 40px 0; 
+  p{
+    color: white;
+  }
+}
 
 @media (max-width: 768px) {
   .foot-box {
@@ -1770,5 +1806,6 @@ footer {
       font-size: 36px;
       float: right;
       line-height: 0.6; }
+
 
 /*# sourceMappingURL=style.css.map */

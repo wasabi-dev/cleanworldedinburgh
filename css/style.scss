@@ -151,6 +151,16 @@ article img{
   padding-top: 2em;
 }
 
+.whatsapp{
+  display: block;
+  position: fixed;
+  padding:2em;
+  z-index: 20;
+  top:75%;
+  text-align: center;
+  float: right;
+  right: 5px;
+}
 
 /* ==============================================================
    GLOBAL STYLES

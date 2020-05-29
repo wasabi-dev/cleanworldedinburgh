@@ -46,6 +46,11 @@ article.description p {
           box-shadow: 1px 1px 3px gray;
 }
 
+button.dropdown-toggle {
+  color: #3f4b5e;
+  background-color: #ffffff1c;
+}
+
 #banner {
   width: 100%;
   background-image: url(../imagenes/service-cleaning-office.jpg);

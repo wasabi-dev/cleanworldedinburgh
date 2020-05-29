@@ -1240,6 +1240,10 @@ figure.effect-lily:hover p {
   transition: 0.2s;
 }
 
+.service-link ul li a.btn.btn-info {
+  color: white;
+}
+
 .service-link ul li a:hover {
   padding-left: 10px;
   text-decoration: none;

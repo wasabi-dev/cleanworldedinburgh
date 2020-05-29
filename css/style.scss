@@ -942,7 +942,11 @@ figure.effect-lily:hover p {
         pointer-events: all;
         -webkit-transition: 0.2s;
         -o-transition: 0.2s;
-        transition: 0.2s; }
+        transition: 0.2s; 
+      &.btn.btn-info{
+        color: white;
+      }
+    }
         .service-link ul li a:hover {
           padding-left: 10px;
           text-decoration: none; }

@@ -49,7 +49,7 @@ article.description p{
 }
 #banner{
   width: 100%;
-  background-image: url(../imagenes/office-1966380_1920.jpg);
+  background-image: url(../imagenes/service-cleaning-office.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -137,6 +137,13 @@ article img{
 .content-ozono img{
   object-fit: cover;
   width: 30em;
+}
+.bloque{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-top: 2em;
 }
 
 

@@ -209,6 +209,15 @@ article img {
   text-align: center;
   float: right;
   right: 5px;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+
+.whatsapp :hover {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
 }
 
 /* ==============================================================
@@ -1295,6 +1304,10 @@ figure.effect-lily:hover p {
 .booking {
   background: #f6fbfc;
   border-top: 2px solid #d0f0f4;
+}
+
+.booking .row {
+  padding-bottom: 1em;
 }
 
 .booking h6 {

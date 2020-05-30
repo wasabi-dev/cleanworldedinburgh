@@ -43,3 +43,4 @@ if ($resultado) {
 } else {
     echo "Tu mensaje no se ha enviado. Intenta de nuevo.";
 }
+?>

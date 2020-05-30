@@ -1371,13 +1371,13 @@ footer p {
 }
 
 .social-icons {
-  margin: 30px 0 0;
+  margin-left: 0.5em;
 }
 
 .social-icons a {
   width: 43px;
   height: 43px;
-  background: #358474;
+  background: #2ce6a9;
   color: white;
   border-radius: 50%;
   display: inline-block;
@@ -1394,6 +1394,7 @@ footer p {
 
 .social-icons a:hover {
   text-decoration: none;
+  background-color: #358474;
   opacity: 0.6;
 }
 
@@ -1990,7 +1991,7 @@ footer p {
    BOOKING SECTION
    ============================================================== */
 .booking-details {
-  background: #f7fbfc;
+  background: #f5f7f4;
 }
 
 .booking-details h2 {

@@ -1041,11 +1041,11 @@ footer {
   margin-bottom: 22px; }
 
 .social-icons {
-  margin: 30px 0 0; }
+  margin-left: 0.5em; }
   .social-icons a {
     width: 43px;
     height: 43px;
-    background: $color2;
+    background: $color1;
     color: white;
     border-radius: 50%;
     display: inline-block;
@@ -1059,6 +1059,7 @@ footer {
       padding: 13px 0; }
     .social-icons a:hover {
       text-decoration: none;
+      background-color: $colorhover;
       opacity: 0.6; }
 
 .subscribe-form {
@@ -1475,7 +1476,7 @@ footer {
    BOOKING SECTION
    ============================================================== */
 .booking-details {
-  background: #f7fbfc; }
+  background: #f5f7f4; }
   .booking-details h2 {
     font-size: 40px;
     font-weight: 700;

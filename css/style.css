@@ -59,7 +59,7 @@ button.dropdown-toggle {
 }
 
 .slider-content .btn-front {
-  padding: 0.6em 2em;
+  padding: 0.6em 1em;
   font-weight: 600;
   background: #2ce6a9;
   border: 1px solid;
@@ -70,6 +70,10 @@ button.dropdown-toggle {
   border-radius: .25rem;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
+}
+
+.slider-content .btn-front li {
+  list-style: none;
 }
 
 #banner {

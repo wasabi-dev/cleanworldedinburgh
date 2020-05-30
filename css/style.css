@@ -176,7 +176,8 @@ article img {
 }
 
 ul.linko li a:hover {
-  -webkit-animation: none;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .content-ozono {

@@ -41,7 +41,7 @@ article.description p {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: #ffffffbd;
+  background-color: #ebebebbd;
   -webkit-box-shadow: 1px 1px 3px gray;
           box-shadow: 1px 1px 3px gray;
 }
@@ -145,8 +145,8 @@ p.textcontact {
 
 article {
   padding: 2em;
-  padding-right: 3em;
-  padding-left: 3em;
+  padding-right: 10em;
+  padding-left: 10em;
 }
 
 article p {
@@ -173,6 +173,10 @@ article img {
 .service-link p {
   padding-top: 1em;
   line-height: 1.8;
+}
+
+ul.linko li:hover {
+  background-color: #358474;
 }
 
 .content-ozono {

@@ -43,7 +43,7 @@ article.description p{
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: #ffffffbd;
+  background-color: #ebebebbd;
   box-shadow: 1px 1px 3px gray;
   
 }
@@ -112,8 +112,8 @@ p.textcontact{
 }
 article{
   padding: 2em;
-  padding-right: 3em;
-  padding-left: 3em;
+  padding-right: 10em;
+  padding-left: 10em;
 }
 article p{
   font-family: 'Muli', sans-serif;
@@ -136,6 +136,12 @@ article img{
       padding-top: 1em;
       line-height: 1.8;
 }
+ul.linko li{
+  &:hover{
+    background-color: $colorhover;
+    
+  }
+}
 .content-ozono{
    padding-top: 2em;
 }
@@ -143,6 +149,7 @@ article img{
   object-fit: cover;
   width: 30em;
 }
+
 .bloque{
   display: flex;
   flex-direction: column;
@@ -1830,6 +1837,9 @@ footer {
       font-size: 36px;
       float: right;
       line-height: 0.6; }
+
+
+      
 
 
 /*# sourceMappingURL=style.css.map */

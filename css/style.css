@@ -175,8 +175,9 @@ article img {
   line-height: 1.8;
 }
 
-ul.linko li:hover {
-  background-color: #358474;
+ul.linko li a:hover {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .content-ozono {

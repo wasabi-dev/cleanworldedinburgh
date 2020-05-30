@@ -32,8 +32,8 @@ $asunto = "Nuevo mensaje de sitio web";
 
 $datos = "De: $nombre\nCorreo: $correo\nMensaje: $mensaje";
 $mensaje = "Has recibido un mensaje desde el formulario de contacto de tu sitio web. Aquí están los detalles:\n$datos";
-$destinatario = "gcbtecno@gmail.com"; # aquí la persona que recibirá los mensajes
-$encabezados = "Sender: correo@dominio.com\r\n"; # El remitente, debe ser un correo de tu dominio de servidor
+$destinatario = "Clean World Edinburgh"; # aquí la persona que recibirá los mensajes
+$encabezados = "Sender: info@cleanworldedinburgh.com\r\n"; # El remitente, debe ser un correo de tu dominio de servidor
 $encabezados .= "From: $nombre <" . $correo . ">\r\n";
 $encabezados .= "Reply-To: $nombre <$correo>\r\n";
 $resultado = mail($destinatario, $asunto, $mensaje, $encabezados);

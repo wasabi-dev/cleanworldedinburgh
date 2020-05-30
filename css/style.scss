@@ -136,11 +136,8 @@ article img{
       padding-top: 1em;
       line-height: 1.8;
 }
-ul.linko li{
-  &:hover{
-    background-color: $colorhover;
-    
-  }
+ul.linko li a:hover{ 
+    -webkit-animation: none;
 }
 .content-ozono{
    padding-top: 2em;

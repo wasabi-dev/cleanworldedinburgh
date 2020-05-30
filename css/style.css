@@ -608,9 +608,9 @@ COUNDOWN TIMER
 
 .affix {
   position: fixed;
-  top: 90px;
+  top: 30%;
   z-index: 1030;
-  width: 18.4%;
+  width: 23%;
 }
 
 @media (max-width: 1200px) {

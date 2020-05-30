@@ -58,7 +58,7 @@ button.dropdown-toggle{
   background-attachment: fixed;
 }
 .slider-content .btn-front{
-  padding: 0.6em 2em;
+  padding: 0.6em 1em;
   font-weight: 600;
   background: $color1;
   border: 1px solid;
@@ -68,6 +68,9 @@ button.dropdown-toggle{
   line-height: 1.25;
   border-radius: .25rem;
   touch-action: manipulation;
+  li {
+    list-style:none
+  }
 }
 
 #banner{

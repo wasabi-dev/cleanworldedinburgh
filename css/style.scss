@@ -613,7 +613,10 @@ video {
   @media (max-width: 576px) {
     .center-block h6 {
       width: 100%; } }
-
+.extraicon{
+   max-width: 180px;
+   display: block;
+}
 /* ==============================================================
    COUNDOWN TIMER
    ============================================================== */

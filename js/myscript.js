@@ -4,16 +4,14 @@ var dobleoven= 58;
 var carpet= 38;
 var window= 35;
 
-
-var canthoras = document.getElementById("canthoras").value;
-console.log(canthoras);
-
-
-document.getElementsById("signo").addEventListener("click", function preciototal(){
+const canthoras = document.getElementById("canthoras").value;
+document.getElementById("signo").addEventListener("keypress", preciototal)
+function preciototal(){
     var h = canthoras * phora;
-    document.getElementById("mostrarhoras").innerHTML = h;     
+    document.getElementById("mostrarhoras").innerHTML = h;
+}
 
-});
+
 
 console.log(preciototal);
 preciototal();

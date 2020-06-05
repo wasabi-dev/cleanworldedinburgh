@@ -108,8 +108,10 @@
             
         <!-----fin personal details---->
         
-        <div class="preference-title" type="button" data-toggle="collapse" data-target="#collapseozono" aria-expanded="false" aria-controls="collapseozono">
-            <h4>Ozono Cleaning <i class="pe-7s-angle-down"></i></h4>
+        <div class="preference-title" data-toggle="collapse" data-target="#collapseozono" aria-expanded="false" aria-controls="collapseozono">
+        <label id="ozonoselect"><h4>Ozono Cleaning</h4></label>
+        <input class="form-check-input" type="checkbox" id="ozonoselect"/>
+
         </div>
             <div class="collapse" id="collapseozono">
             <div class="card card-body">
@@ -190,8 +192,10 @@
             </div>
             <br>
               <!-- Fin primer boton -->
-              <div class="preference-title" type="button" data-toggle="collapse" data-target="#collapseclean" aria-expanded="false" aria-controls="collapseclean">
-                <h4>Cleaning Services<i class="pe-7s-angle-down"></i></h4>
+              <div class="preference-title"  data-toggle="collapse" data-target="#collapseclean" aria-expanded="false" aria-controls="collapseclean">
+                <label id="clean"><h4>Cleaning Services</h4>
+                </label>
+                <input class="form-check-input" type="checkbox" id="clean"/>
             </div>
                 <div class="collapse" id="collapseclean">
                 <div class="card card-body">
@@ -209,7 +213,7 @@
                                             <input class="counter__value js-counter-value" id="canthoras" type="text"  tabindex="-1"/>
                                         </div>
                                         <div class="counter__item">
-                                            <a class="counter__plus js-counter-btn fa fa-plus" id="signo" aria-hidden="true" data-action="plus"></a>
+                                            <a class="counter__plus js-counter-btn fa fa-plus" id="signo1" aria-hidden="true" data-action="plus"></a>
                                         </div>
                                     </div>
                                     <p>his is what we think the best based on your preferences. Feel free to change it if you want.</p>
@@ -333,11 +337,12 @@
     </div>
     <div class="row mt-4">
         <div class="col-md-12">
-            <button class="btn btn-block complete-booking" type="submit"><span class="pe-7s-check"></span>Complete Quote</button>
+            <button class="btn btn-block complete-booking" id="btnenviar" type="submit"><span class="pe-7s-check"></span>Complete Quote</button>
         </div>
     </div>
 </div>
 </form> <!----Cierre del form------>
+
 
 
  <!-- Booking Summary -->
@@ -350,8 +355,8 @@
         <div class="fesilities">
             <ul>
                 <li><i class="fa fa-paint-brush" aria-hidden="true"></i>
-                    <p>Standard Cleaning</p>
-                </li>
+                    <p id="type"></p>
+                </li><br>
                 <li><i class="fa fa-calendar" aria-hidden="true"></i>
                     <p>Tues. 12/31/2016 @ 9:00 AM</p>
                 </li>
@@ -386,15 +391,15 @@
 
  <!-- jQuery, Bootstrap JS. -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <!-- Slick JS -->
-    <script src="js/slick.min.js"></script>
+    <script src="./js/slick.min.js"></script>
     <!-- Date Picker JS -->
-    <script src="js/datepicker.min.js"></script>
+    <script src="./js/datepicker.min.js"></script>
     <!-- Main JS -->
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
     <script src="./js/myscript.js"></script>
 
 </body>

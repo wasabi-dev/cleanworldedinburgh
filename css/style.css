@@ -824,6 +824,18 @@ video {
   display: block;
 }
 
+.form-check-input {
+  position: relative;
+  cursor: pointer;
+  color: white;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+.form-check-input :checked {
+  background-color: #2ce6a9;
+}
+
 /* ==============================================================
    COUNDOWN TIMER
    ============================================================== */

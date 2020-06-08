@@ -26,8 +26,9 @@
         # Mail Content
         $content = "Name: $name\n";
         $content .= "Email: $email\n\n";
+        $content .= "Address:\n$address\n";
+        $content .= "Phone:\n$phone\n";
         $content .= "Message:\n$message\n";
-
         # email headers.
         $headers = "From: $name <$email>";
 

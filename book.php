@@ -14,6 +14,7 @@
         $phone = trim($_POST["phone"]);
         $address = trim($_POST["address"]);
         $city = trim($_POST["city"]);
+        $cleantype = filter_var($_POST['typeclean'], FILTER_SANITIZE_STRING);
         
         
         if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($subject) OR empty($phone)) {
@@ -28,7 +29,7 @@
         $content .= "Email: $email\n\n";
         $content .= "Address:\n$address\n";
         $content .= "Phone:\n$phone\n";
-        $content .= "Message:\n$message\n";
+        $content .= "Clean Type:\n$cleantype\n";
         # email headers.
         $headers = "From: $name <$email>";
 

@@ -11,10 +11,15 @@
         $name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));
  
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-        $phone = trim($_POST["phone"]);
-        $address = trim($_POST["address"]);
-        $city = trim($_POST["city"]);
-        $cleantype = filter_var($_POST['typeclean'], FILTER_SANITIZE_STRING);
+        $phone = $_POST["phone"];
+        $address = $_POST["address"];
+        $city = $_POST["city"];
+        $typeclean = $_POST["typeclean"];
+        if (isset($_POST["typeclean"]) && $_POST["typeclean"] == '1')
+        echo 'Ozono Clean';
+     else
+        echo 'Standard Clean';
+  
         
         
         if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($subject) OR empty($phone)) {
@@ -29,7 +34,7 @@
         $content .= "Email: $email\n\n";
         $content .= "Address:\n$address\n";
         $content .= "Phone:\n$phone\n";
-        $content .= "Clean Type:\n$cleantype\n";
+        $content .= "Clean Type:\n$typeclean\n";
         # email headers.
         $headers = "From: $name <$email>";
 

@@ -229,6 +229,50 @@ ul.linko li a:hover {
           transform: translateY(-20px);
 }
 
+.cv {
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+  background-color: #ececec;
+}
+
+.cv .service-link {
+  padding-top: 1em;
+  padding-left: 3em;
+}
+
+.cv .foto {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cv img.perfil {
+  max-height: 400px;
+  width: auto;
+  border: solid 2px #358474;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 400px) {
+  .cv img.perfil {
+    margin-left: 8%;
+  }
+}
+
 /*==================Modal===========================*/
 .modal {
   display: none;

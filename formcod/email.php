@@ -35,14 +35,14 @@ try {
     $mail->isSMTP();                                            // Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'jcharris.villa@gmail.com';                     // SMTP username
-    $mail->Password   = 'Chavilla.1993';                               // SMTP password
+    $mail->Username   = 'cyntybod@gmail.com';                     // SMTP username
+    $mail->Password   = 'pancho789';                               // SMTP password
     $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
     $mail->setFrom($email, $name);
-    $mail->addAddress('jcharris.villa@gmail.com', 'Jesús');     // Add a recipient
+    $mail->addAddress('cyntybod@gmail.com', 'Cynty');     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML

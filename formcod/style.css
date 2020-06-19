@@ -1,0 +1,112 @@
+@font-face{
+   font-family: 'Open Sans';
+   src: url('OpenSans-Light.ttf'); 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+h1{
+    font-weight: 400 !important;
+}
+
+.frm{
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+
+form input,select,textarea{
+    border-radius: 8px;
+    color: rgb(50, 50, 50);
+    background-color: rgba(200, 200, 200, 0.2);
+    border-color: rgba(100, 100, 100, 0.5);
+    border-width: 1px;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 14px !important;
+    line-height: 20px;
+    font-family: "open sans";
+    text-decoration: none;
+    padding: 3px 0;
+}
+
+select{
+    margin-top: -8px;
+}
+
+label{
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+
+.lbl i.icono{
+    font-size: 20px;
+    color: red !important;
+}
+
+@media(min-width:768px){
+    input,select{
+        padding-top: 6px !important;
+        padding-bottom: 6px !important;
+    }
+    .direcciones{
+        margin-bottom: 15px;
+    }
+
+    .btn-submit{
+        padding: 8px 0 !important;
+        width: 150px;
+    }
+
+    label{
+        width: 95%;
+    }
+}
+#show-ozono{
+   
+}
+#standard{
+    
+}
+.modal h3{
+    text-align: center;
+}
+
+.error{
+    border: 1px solid red;   
+}
+
+.exit{
+    border: 1px solid green;
+    background-color: rgb(232, 240, 254) !important;
+}
+
+.notification{
+    position: fixed;
+    z-index: 100;
+    right: 6rem;
+    padding: 1.5rem 2rem;
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+
+.visible{
+    opacity: 1;
+}
+
+.notification-exit{
+    background-color: #009688;
+    color: white;
+}
+
+.notification-error{
+    background-color:#e57373;
+    color: black;
+}
+
+

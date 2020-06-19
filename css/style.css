@@ -230,7 +230,6 @@ ul.linko li a:hover {
 }
 
 .cv {
-  padding: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,23 +244,32 @@ ul.linko li a:hover {
   background-color: #ececec;
 }
 
+.cv h2 {
+  text-align: center;
+  padding: 1em;
+}
+
 .cv .service-link {
-  padding-top: 1em;
-  padding-left: 10%;
+  text-align: center;
+}
+
+.cv .service-link p {
+  padding-top: 0;
 }
 
 .cv .foto {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-top: 1em;
+}
+
+.cv .foto img {
+  max-width: 100%;
+  height: auto;
 }
 
 .cv img.perfil {
-  max-height: 400px;
+  max-height: 300px;
   width: auto;
+  margin-top: 1em;
   border: solid 2px #358474;
   -o-object-fit: cover;
      object-fit: cover;

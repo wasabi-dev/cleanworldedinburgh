@@ -3,11 +3,11 @@
    src: url('OpenSans-Light.ttf'); 
 }
 
-*{
+/****{
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif !important;
-}
+}***/
 
 h1{
     font-weight: 400 !important;
@@ -36,6 +36,7 @@ form input,select,textarea{
 
 select{
     margin-top: -8px;
+    font-family: 'Open-sans', sans-serif;
 }
 
 label{
@@ -67,12 +68,7 @@ label{
         width: 95%;
     }
 }
-#show-ozono{
-   
-}
-#standard{
-    
-}
+
 .modal h3{
     text-align: center;
 }

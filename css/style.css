@@ -244,26 +244,25 @@ ul.linko li a:hover {
   background-color: #ececec;
 }
 
+.cv .blocks {
+  padding-left: 5%;
+}
+
+.cv .blocks p {
+  padding-left: 8%;
+  line-height: 1.8;
+  margin-top: 1em;
+}
+
 .cv h2 {
   text-align: center;
   padding: 1em;
 }
 
-.cv .service-link {
-  text-align: center;
-}
-
-.cv .service-link p {
-  padding-top: 0;
-}
-
-.cv .foto {
-  margin-top: 1em;
-}
-
-.cv .foto img {
+.cv img {
   max-width: 100%;
-  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .cv img.perfil {

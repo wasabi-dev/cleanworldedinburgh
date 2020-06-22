@@ -180,35 +180,37 @@ ul.linko li a:hover{
   justify-content: center;
   text-align: left;
   background-color: rgb(236, 236, 236);
-  .blocks{
-    padding-left: 5%;
-    p{
-      padding-left: 8%;
-      line-height: 1.8;
-      margin-top: 1em;
-    }
-     }
   h2{
     text-align: center;
     padding: 1em;
   }
+  .blocks{
+    padding-left: 5%;
+    p{
+      padding-left: 8%;
+      padding-right: 5%;
+      line-height: 1.8;
+      margin-top: 1em;
+    }
+
     img{
       max-width: 100%;
       object-fit: cover;
     
   }
- 
- 
-  img.perfil{
-    max-height: 300px;
-    width: auto;
-    margin-top: 1em;
-    border: solid 2px $color2;
-    object-fit: cover;
-   @media (max-width:400px) {
-      margin-left: 8%;
-   }
-  }
+}
+}
+.blocks img.perfil{
+  max-height: 300px;
+  width: auto;
+  margin-top: 1em;
+  border: solid 2px $color2;
+  object-fit: cover;
+ @media (max-width:400px) {
+    margin-left: 13%;
+    max-width: 250px;
+    height: auto;
+ }
 }
 section.video{
   background-color: rgb(228, 228, 228);

@@ -43,7 +43,7 @@ article.description p{
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: #ffffffbd;
+  background-color: #ebebebbd;
   box-shadow: 1px 1px 3px gray;
   
 }
@@ -58,7 +58,7 @@ button.dropdown-toggle{
   background-attachment: fixed;
 }
 .slider-content .btn-front{
-  padding: 0.6em 2em;
+  padding: 0.6em 1em;
   font-weight: 600;
   background: $color1;
   border: 1px solid;
@@ -68,6 +68,9 @@ button.dropdown-toggle{
   line-height: 1.25;
   border-radius: .25rem;
   touch-action: manipulation;
+  li {
+    list-style:none
+  }
 }
 
 #banner{
@@ -112,8 +115,8 @@ p.textcontact{
 }
 article{
   padding: 2em;
-  padding-right: 3em;
-  padding-left: 3em;
+  padding-right: 15%;
+  padding-left: 15%;
 }
 article p{
   font-family: 'Muli', sans-serif;
@@ -136,6 +139,10 @@ article img{
       padding-top: 1em;
       line-height: 1.8;
 }
+ul.linko li a:hover{ 
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .content-ozono{
    padding-top: 2em;
 }
@@ -143,6 +150,7 @@ article img{
   object-fit: cover;
   width: 30em;
 }
+
 .bloque{
   display: flex;
   flex-direction: column;
@@ -166,7 +174,52 @@ article img{
     transform: translateY(-20px);
   }
 }
+.cv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  background-color: rgb(236, 236, 236);
+  h2{
+    text-align: center;
+    padding: 1em;
+  }
+  .blocks{
+    padding-left: 5%;
+    p{
+      padding-left: 8%;
+      padding-right: 5%;
+      line-height: 1.8;
+      margin-top: 1em;
+    }
 
+    img{
+      max-width: 100%;
+      object-fit: cover;
+    
+  }
+}
+}
+.blocks img.perfil{
+  max-height: 300px;
+  width: auto;
+  margin-top: 1em;
+  border: solid 2px $color2;
+  object-fit: cover;
+ @media (max-width:400px) {
+    margin-left: 13%;
+    max-width: 250px;
+    height: auto;
+ }
+}
+section.video{
+  background-color: rgb(228, 228, 228);
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+  h2{
+    padding:0.5em;
+  }
+}
 /* ==============================================================
    GLOBAL STYLES
    ============================================================== */
@@ -460,12 +513,16 @@ COUNDOWN TIMER
 
 .affix {
   position: fixed;
-  top: 90px;
+  top:30%;
   z-index: 1030;
-  width: 18.4%; }
+  width: 23%; }
   @media (max-width: 1200px) {
     .affix {
       width: 26.2%; } }
+video {
+   max-width: 100%;
+   padding: 1em;
+}
 
 /* ==============================================================
    SLIDER
@@ -601,6 +658,19 @@ COUNDOWN TIMER
   @media (max-width: 576px) {
     .center-block h6 {
       width: 100%; } }
+.extraicon{
+   max-width: 180px;
+   display: block;
+}
+.form-check-input{
+  position: relative;
+  cursor: pointer;
+  color: white;
+  touch-action: manipulation;
+  :checked{
+     background-color: $color1;
+  }
+}
 
 /* ==============================================================
    COUNDOWN TIMER
@@ -1041,11 +1111,11 @@ footer {
   margin-bottom: 22px; }
 
 .social-icons {
-  margin: 30px 0 0; }
+  margin-left: 0.5em; }
   .social-icons a {
     width: 43px;
     height: 43px;
-    background: $color2;
+    background: $color1;
     color: white;
     border-radius: 50%;
     display: inline-block;
@@ -1059,6 +1129,7 @@ footer {
       padding: 13px 0; }
     .social-icons a:hover {
       text-decoration: none;
+      background-color: $colorhover;
       opacity: 0.6; }
 
 .subscribe-form {
@@ -1475,7 +1546,7 @@ footer {
    BOOKING SECTION
    ============================================================== */
 .booking-details {
-  background: #f7fbfc; }
+  background: #f5f7f4; }
   .booking-details h2 {
     font-size: 40px;
     font-weight: 700;
@@ -1752,16 +1823,16 @@ footer {
   margin: 0 0 10px; }
 
 .card-number {
-  border: 2px solid #e2e6e7;
+  border: 2px solid #c4c4c4;
   padding: 20px 20px;
   width: 100%;
   border-radius: 5px; }
   .card-number::-webkit-input-placeholder {
-    color: #d4d9e0; }
+    color: #c4c4c4; }
   .card-number:-ms-input-placeholder {
-    color: #d4d9e0; }
+    color: #c4c4c4; }
   .card-number::placeholder {
-    color: #d4d9e0; }
+    color: #c4c4c4; }
 
 .card-num {
   position: relative; }
@@ -1829,6 +1900,9 @@ footer {
       font-size: 36px;
       float: right;
       line-height: 0.6; }
+
+
+      
 
 
 /*# sourceMappingURL=style.css.map */

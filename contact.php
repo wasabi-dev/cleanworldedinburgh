@@ -1,45 +1,49 @@
 <?php
-/**
- * Simple formulario de contacto con PHP
- *
- * @author parzibyte
- * @see https://parzibyte.me/blog
- */
 
-if (empty($_POST["nombre"])) {
-    exit("Please, write your name");
-}
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-if (empty($_POST["correo"])) {
-    exit("Please, write your email");
-}
+        # FIX: Replace this email with recipient email
+        $mail_to = "info@cleanworldedinburgh.com";
+        
+        # Sender Data
+        $subject = "Mensaje de la web";
+        
+        $name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));
+ 
+        $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+        $message = trim($_POST["message"]);
+        
+        if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($subject) OR empty($message)) {
+            # Set a 400 (bad request) response code and exit.
+            http_response_code(400);
+            echo "Please complete the form and try again.";
+            exit;
+        }
+        
+        # Mail Content
+        $content = "Name: $name\n";
+        $content .= "Email: $email\n\n";
+        $content .= "Message:\n$message\n";
 
-if (empty($_POST["mensaje"])) {
-    exit("Please, write your message");
-}
+        # email headers.
+        $headers = "From: $name <$email>";
 
-$nombre = $_POST["nombre"];
-$correo = $_POST["correo"];
-$mensaje = $_POST["mensaje"];
+        # Send the email.
+        $success = mail($mail_to, $subject, $content, $headers);
+        if ($success) {
+            # Set a 200 (okay) response code.
+            http_response_code(200);
+            echo "Thank you! Your message was sent correctly.";
+        } else {
+            # Set a 500 (internal server error) response code.
+            http_response_code(500);
+            echo "Oops! Something went wrong, we couldn't send your message.";
+        }
 
-$correo = filter_var($correo, FILTER_VALIDATE_EMAIL);
-if (!$correo) {
-    echo "Wrong email";
-    exit;
-}
+    } else {
+        # Not a POST request, set a 403 (forbidden) response code.
+        http_response_code(403);
+        echo "There was a problem with your submission, please try again.";
+    }
 
-$asunto = "Nuevo mensaje de sitio web";
-
-$datos = "De: $nombre\nCorreo: $correo\nMensaje: $mensaje";
-$mensaje = "Has recibido un mensaje desde el formulario de contacto de tu sitio web. Aquí están los detalles:\n$datos";
-$destinatario = "gcbtecno@gmail.com"; # aquí la persona que recibirá los mensajes
-$encabezados = "Sender: correo@dominio.com\r\n"; # El remitente, debe ser un correo de tu dominio de servidor
-$encabezados .= "From: $nombre <" . $correo . ">\r\n";
-$encabezados .= "Reply-To: $nombre <$correo>\r\n";
-$resultado = mail($destinatario, $asunto, $mensaje, $encabezados);
-if ($resultado) {
-    echo "<h1>Mensaje enviado, ¡Gracias por contactarme!</h1>";
-    echo "<p>Tu mensaje se ha enviado correctamente.</p><h2>Importante</h2><p>Revisa tu bandeja de SPAM, en ocasiones mis respuestas quedan ahí. </p>";
-} else {
-    echo "Tu mensaje no se ha enviado. Intenta de nuevo.";
-}
+?>

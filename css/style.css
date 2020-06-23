@@ -41,7 +41,7 @@ article.description p {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: #ffffffbd;
+  background-color: #ebebebbd;
   -webkit-box-shadow: 1px 1px 3px gray;
           box-shadow: 1px 1px 3px gray;
 }
@@ -59,7 +59,7 @@ button.dropdown-toggle {
 }
 
 .slider-content .btn-front {
-  padding: 0.6em 2em;
+  padding: 0.6em 1em;
   font-weight: 600;
   background: #2ce6a9;
   border: 1px solid;
@@ -70,6 +70,10 @@ button.dropdown-toggle {
   border-radius: .25rem;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
+}
+
+.slider-content .btn-front li {
+  list-style: none;
 }
 
 #banner {
@@ -145,8 +149,8 @@ p.textcontact {
 
 article {
   padding: 2em;
-  padding-right: 3em;
-  padding-left: 3em;
+  padding-right: 15%;
+  padding-left: 15%;
 }
 
 article p {
@@ -173,6 +177,11 @@ article img {
 .service-link p {
   padding-top: 1em;
   line-height: 1.8;
+}
+
+ul.linko li a:hover {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .content-ozono {
@@ -218,6 +227,70 @@ article img {
 .whatsapp :hover {
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
+}
+
+.cv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+  background-color: #ececec;
+}
+
+.cv h2 {
+  text-align: center;
+  padding: 1em;
+}
+
+.cv .blocks {
+  padding-left: 5%;
+}
+
+.cv .blocks p {
+  padding-left: 8%;
+  padding-right: 5%;
+  line-height: 1.8;
+  margin-top: 1em;
+}
+
+.cv .blocks img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blocks img.perfil {
+  max-height: 300px;
+  width: auto;
+  margin-top: 1em;
+  border: solid 2px #358474;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 400px) {
+  .blocks img.perfil {
+    margin-left: 13%;
+    max-width: 250px;
+    height: auto;
+  }
+}
+
+section.video {
+  background-color: #e4e4e4;
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+}
+
+section.video h2 {
+  padding: 0.5em;
 }
 
 /* ==============================================================
@@ -599,15 +672,20 @@ COUNDOWN TIMER
 
 .affix {
   position: fixed;
-  top: 90px;
+  top: 30%;
   z-index: 1030;
-  width: 18.4%;
+  width: 23%;
 }
 
 @media (max-width: 1200px) {
   .affix {
     width: 26.2%;
   }
+}
+
+video {
+  max-width: 100%;
+  padding: 1em;
 }
 
 /* ==============================================================
@@ -803,6 +881,23 @@ COUNDOWN TIMER
   .center-block h6 {
     width: 100%;
   }
+}
+
+.extraicon {
+  max-width: 180px;
+  display: block;
+}
+
+.form-check-input {
+  position: relative;
+  cursor: pointer;
+  color: white;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+.form-check-input :checked {
+  background-color: #2ce6a9;
 }
 
 /* ==============================================================
@@ -1371,13 +1466,13 @@ footer p {
 }
 
 .social-icons {
-  margin: 30px 0 0;
+  margin-left: 0.5em;
 }
 
 .social-icons a {
   width: 43px;
   height: 43px;
-  background: #358474;
+  background: #2ce6a9;
   color: white;
   border-radius: 50%;
   display: inline-block;
@@ -1394,6 +1489,7 @@ footer p {
 
 .social-icons a:hover {
   text-decoration: none;
+  background-color: #358474;
   opacity: 0.6;
 }
 
@@ -1990,7 +2086,7 @@ footer p {
    BOOKING SECTION
    ============================================================== */
 .booking-details {
-  background: #f7fbfc;
+  background: #f5f7f4;
 }
 
 .booking-details h2 {
@@ -2356,26 +2452,26 @@ footer p {
 }
 
 .card-number {
-  border: 2px solid #e2e6e7;
+  border: 2px solid #c4c4c4;
   padding: 20px 20px;
   width: 100%;
   border-radius: 5px;
 }
 
 .card-number::-webkit-input-placeholder {
-  color: #d4d9e0;
+  color: #c4c4c4;
 }
 
 .card-number:-ms-input-placeholder {
-  color: #d4d9e0;
+  color: #c4c4c4;
 }
 
 .card-number::-ms-input-placeholder {
-  color: #d4d9e0;
+  color: #c4c4c4;
 }
 
 .card-number::placeholder {
-  color: #d4d9e0;
+  color: #c4c4c4;
 }
 
 .card-num {

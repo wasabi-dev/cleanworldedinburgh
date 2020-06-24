@@ -47,6 +47,7 @@
         "Comments: $comments <br/><br/>".
         "Details to the areas: $details \n\n";
 
+        $validation=empty($name); die();
         
         if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($subject) OR empty($message)) {
             # Set a 400 (bad request) response code and exit.

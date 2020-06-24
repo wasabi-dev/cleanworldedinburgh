@@ -35,7 +35,7 @@ export default class Frame {
      }).then(res=>{
       return res.json()
      }).then(data=>{
-       console.log(data);
+       
        if (data.response==='The message has been sent') {
         this.showMessage(data.response,'notification-exit');
         this.clean(); 

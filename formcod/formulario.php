@@ -47,13 +47,15 @@
         "Comments: $comments <br/><br/>".
         "Details to the areas: $details \n\n";
 
-        var_dump($message); die();
         
         if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($subject) OR empty($message)) {
             # Set a 400 (bad request) response code and exit.
             http_response_code(400);
-            echo "Please complete the form and try again.";
-            exit;
+            $response=[
+                'response'=>'Todos los campos son obligatorios'
+            ];
+            die(json_encode($response));
+            //exit;
         }
         
         # Mail Content
@@ -72,18 +74,28 @@
         if ($success) {
             # Set a 200 (okay) response code.
             http_response_code(200);
+            $response=[
+                'response'=>'The message has been sent'
+            ];
+            die(json_encode($response));
+
             echo "Thank you! Your message was sent correctly.";
         } else {
             # Set a 500 (internal server error) response code.
-            die(json_encode($success));
             http_response_code(500);
-            echo "Oops! Something went wrong, we couldn't send your message.";
+            $response=[
+                'response'=>'The message has not been sent'
+            ];
+            die(json_encode($response));
         }
 
     } else {
         # Not a POST request, set a 403 (forbidden) response code.
         http_response_code(403);
-        echo "There was a problem with your submission, please try again.";
+        $response=[
+            'response'=>'Server not found'
+        ];
+        die(json_encode($response));
     }
 
 ?>

@@ -33,12 +33,10 @@ export default class Frame {
          method:'POST',
          body:form
      }).then(res=>{
-      console.log(res);
       return res.json()
      }).then(data=>{
        console.log(data);
-       
-     })
+     });
 
          /* if (res.status===200) {
 

@@ -26,8 +26,6 @@ $preferedTime=$_POST['preferedTime'];
 $street=$_POST['street'];
 $typeClean=$_POST['typeClean'];
 
-var_dump($_POST); die();
-
 $mail = new PHPMailer(true);
 
 try {

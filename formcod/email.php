@@ -65,6 +65,8 @@ try {
                      
     $mail->send();
 
+    var_dump($mail); die();
+
     $response=[
         'response'=>'The message has been sent'
     ];

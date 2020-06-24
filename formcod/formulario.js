@@ -25,11 +25,11 @@ export default class Frame {
     form.append('street',this.data.street);
     form.append('typeClean',this.data.typeClean);
       
-     fetch('formcod/email.php',{
+     fetch('email.php',{
          method:'POST',
          body:form
      }).then(res=>{
-       console.log(res); return;
+       console.log(res);
        if (res.status===200) {
         this.showMessage(data.response,'notification-exit');
         this.clean(); 

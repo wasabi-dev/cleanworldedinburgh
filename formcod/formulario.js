@@ -33,9 +33,11 @@ export default class Frame {
      }).then(data=>{
        if(data.status===200){
         this.showMessage(data.response,'notification-exit');
+        this.clean();
        }
        else{
         this.showMessage(data.response,'notification-error');
+        this.clean();
        }
      });
   }

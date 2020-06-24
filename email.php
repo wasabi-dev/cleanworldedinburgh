@@ -28,7 +28,6 @@ $typeClean=$_POST['typeClean'];
 
 $mail = new PHPMailer(true);
 
-try {
     //Server settings
     $mail->SMTPDebug = 0;//SMTP::DEBUG_SERVER;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
@@ -62,13 +61,25 @@ try {
                      "Comments: $comments <br/><br/>".
                      "Details to the areas: $details \n\n";
                      
-    $mail->send();
+    $sent=$mail->send();
 
-    echo 'Message has been sent';
+    if ($sent){
+        $response=[
+            'response'=>'Message has been sent',
+            'status'=>200
+        ];
+    }
+    else{
+        $response=[
+            'response'=>'Message has not been sent',
+            'status'=>404
+        ];
+    }
 
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-}
+    die(json_encode($response));
+
+
+   // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 
 
 ?>

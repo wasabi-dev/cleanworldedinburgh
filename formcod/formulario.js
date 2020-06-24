@@ -29,17 +29,17 @@ export default class Frame {
          method:'POST',
          body:form
      }).then(res=>{
-       console.log(res);
-       if (res.status===200) {
+       return res.json();
+     }).then(data=>{
+       console.log(data);
+       if(data.status===200){
         this.showMessage(data.response,'notification-exit');
-        this.clean(); 
        }
        else{
         this.showMessage(data.response,'notification-error');
        }
-
      });
-    }
+  }
 
   showMessage(message,status){
     const page=document.querySelector('body');

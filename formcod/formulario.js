@@ -31,7 +31,6 @@ export default class Frame {
      }).then(res=>{
        return res.json();
      }).then(data=>{
-       console.log(data);
        if(data.status===200){
         this.showMessage(data.response,'notification-exit');
        }

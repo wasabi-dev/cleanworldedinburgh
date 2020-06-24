@@ -17,7 +17,7 @@
     integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
 <!-- Main CSS -->
-    <link rel="stylesheet" href="/formcod/style.css">
+    <link rel="stylesheet" href="formcod/style.css">
     <link rel="icon" href="/imagenes/favicon3.ico" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162780618-3"></script>

@@ -1,7 +1,7 @@
 <?php
 
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        var_dump($_POST); die();
         $address=$_POST['address'];
         $bedrooms=$_POST['bedrooms'];
         $bathrooms=$_POST['bathrooms'];

@@ -25,12 +25,14 @@ export default class Frame {
     form.append('street',this.data.street);
     form.append('typeClean',this.data.typeClean);
       
-     fetch('formcod/formulario.php',{
+     fetch('formcod/email.php',{
          method:'POST',
          body:form
      }).then(res=>{
       return res.json()
      }).then(data=>{
+       console.log(data);
+       
 
        if (data.response==='The message has been sent') {
         this.showMessage(data.response,'notification-exit');

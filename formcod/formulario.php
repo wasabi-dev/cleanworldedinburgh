@@ -83,7 +83,7 @@
             ];
             die(json_encode($response));
 
-            echo "Thank you! Your message was sent correctly.";
+            //echo "Thank you! Your message was sent correctly.";
         } else {
             # Set a 500 (internal server error) response code.
             http_response_code(500);

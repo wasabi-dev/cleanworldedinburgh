@@ -37,7 +37,7 @@ try {
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'info@cleanworldedinburgh.com';                     // SMTP username
     $mail->Password   = 'hjFq$9341';                               // SMTP password
-    $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+    $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
@@ -64,9 +64,18 @@ try {
                      "Details to the areas: $details \n\n";
                      
     $mail->send();
-    echo 'Message has been sent';
+
+    $response=[
+        'response'=>'The message has been sent'
+    ];
+    die(json_encode($response));
+
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+
+    $response=[
+        'response'=>$mail->ErrorInfo
+    ];
+    die(json_encode($response));
 }
 
 

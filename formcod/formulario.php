@@ -46,6 +46,8 @@
         "Prefered Time: $preferedTime <br/><br/>".
         "Comments: $comments <br/><br/>".
         "Details to the areas: $details \n\n";
+
+        var_dump($message); die();
         
         if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($subject) OR empty($message)) {
             # Set a 400 (bad request) response code and exit.

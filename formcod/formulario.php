@@ -51,10 +51,6 @@
         $validationEmail=filter_var($email, FILTER_VALIDATE_EMAIL);
         $validationSubjet=empty($subject);
         $validationMessage=empty($message);
-
-        var_dump($validationName);
-
-        var_dump($validationName); die();
         
         if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($subject) OR empty($message)) {
             # Set a 400 (bad request) response code and exit.

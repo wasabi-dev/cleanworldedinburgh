@@ -26,16 +26,12 @@ export default class Frame {
     form.append('typeClean',this.data.typeClean);
       
      fetch('formcod/formulario.php',{
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
          method:'POST',
          body:form
      }).then(res=>{
       return res.json()
      }).then(data=>{
-       
+
        if (data.response==='The message has been sent') {
         this.showMessage(data.response,'notification-exit');
         this.clean(); 

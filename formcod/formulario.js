@@ -34,7 +34,13 @@ export default class Frame {
          body:form
      }).then(res=>{
       console.log(res);
-         if (res.status===200) {
+      return res.json()
+     }).then(data=>{
+       console.log(data);
+       
+     })
+
+         /* if (res.status===200) {
 
            this.showMessage('Message has been sent','notification-exit');
            this.clean();
@@ -42,8 +48,7 @@ export default class Frame {
          else
          {
           this.showMessage('Message has not been sent','notification-error');
-         }
-     })
+         } */
       
   }
 

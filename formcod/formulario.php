@@ -52,7 +52,7 @@
             # Set a 400 (bad request) response code and exit.
             http_response_code(400);
             $response=[
-                'response'=>'Todos los campos son obligatorios'
+                'response'=>'All fields are requered'
             ];
             die(json_encode($response));
             //exit;

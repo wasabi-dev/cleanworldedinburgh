@@ -36,18 +36,14 @@ export default class Frame {
       return res.json()
      }).then(data=>{
        console.log(data);
-     });
-
-         /* if (res.status===200) {
-
-           this.showMessage('Message has been sent','notification-exit');
-           this.clean();
-         }
-         else
-         {
-          this.showMessage('Message has not been sent','notification-error');
-         } */
-      
+       if (data.response==='The message has been sent') {
+        this.showMessage(data.response,'notification-exit');
+        this.clean(); 
+       }
+       else{
+        this.showMessage(data.response,'notification-error');
+       }
+     });      
   }
 
   showMessage(message,status){

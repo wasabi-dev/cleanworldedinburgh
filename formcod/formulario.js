@@ -39,6 +39,7 @@ export default class Frame {
        }
 
      });
+    }
 
   showMessage(message,status){
     const page=document.querySelector('body');

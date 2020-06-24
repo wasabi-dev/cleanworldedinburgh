@@ -65,19 +65,10 @@ try {
                      
     $mail->send();
 
-    var_dump($mail); die();
-
-    $response=[
-        'response'=>'The message has been sent'
-    ];
-    die(json_encode($response));
+    echo 'Message has been sent';
 
 } catch (Exception $e) {
-
-    $response=[
-        'response'=>$mail->ErrorInfo
-    ];
-    die(json_encode($response));
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
 

@@ -29,8 +29,8 @@ export default class Frame {
          method:'POST',
          body:form
      }).then(res=>{
+      console.log(res);
          if (res.status===200) {
-          console.log(res);
 
            this.showMessage('Message has been sent','notification-exit');
            this.clean();

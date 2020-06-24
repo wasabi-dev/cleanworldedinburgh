@@ -30,21 +30,15 @@ export default class Frame {
          body:form
      }).then(res=>{
        console.log(res); return;
-       
-      return res.json()
-     }).then(data=>{
-       console.log(data);
-       
-
-       if (data.response==='The message has been sent') {
+       if (res.status===200) {
         this.showMessage(data.response,'notification-exit');
         this.clean(); 
        }
        else{
         this.showMessage(data.response,'notification-error');
        }
-     });      
-  }
+
+     });
 
   showMessage(message,status){
     const page=document.querySelector('body');

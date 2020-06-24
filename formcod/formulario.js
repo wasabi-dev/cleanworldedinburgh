@@ -49,7 +49,9 @@ export default class Frame {
     dialog.classList.add('notification',status);
     dialog.textContent=message;
 
-    page.insertBefore(dialog, document.querySelector('.container'));
+
+    page.insertBefore(dialog, document.querySelector('.whatsapp'));
+    dialog.classList.add('visible');
 
     setTimeout(()=>{
       dialog.classList.add('visible');

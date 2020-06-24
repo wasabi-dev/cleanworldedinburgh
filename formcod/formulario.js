@@ -29,6 +29,8 @@ export default class Frame {
          method:'POST',
          body:form
      }).then(res=>{
+       console.log(res); return;
+       
       return res.json()
      }).then(data=>{
        console.log(data);

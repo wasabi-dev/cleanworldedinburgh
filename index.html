@@ -57,13 +57,18 @@
                                         <a class="dropdown-item" href="#house">Houses</a>
                                         <a class="dropdown-item" href="#restaurant">Bars & Restaurants</a>
                                         <a class="dropdown-item" href="#fleet">Fleet</a>
-                                        <a class="dropdown-item" href="#nebulization">Nebulization Disinfection</a>
                                         <a class="dropdown-item" href="#about">About</a>
                                       </div>
                                     </div>
                                 </li>    
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#ozone">Ozone Cleaning </a>
+                                    <button class="btn  dropdown-toggle" data-toggle="dropdown">Disinfection Services </button>
+                                    <div class="dropdown">
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#ozone">Ozone Cleaning</a>
+                                        <a class="dropdown-item" href="#nebulization">Nebulization Disinfection</a>
+                                      </div>
+                                    </div>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="contact.html">Contact </a>
@@ -181,7 +186,48 @@
         </div>
     </div>
 </section>
-<!-- Object img Sec 03 --> 
+<section class="service" id="nebulization">
+    <div class="img-objectfit">
+        <div class="grid">
+            <figure class="effect-lily">
+                <img src="imagenes/clinic.jpg" class="img-fluid" alt="#">
+            </figure>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <div class="service-link">
+                    <h3><span>Nebulization disinfection</span></h3>
+                    <p>Some viruses and bacteria can remain on surfaces for a long time. Due to the quarantine, 
+                        many places have been closed and need deep cleaning and disinfection in all corners.
+                         The nebulization disinfection technique consists of using a disinfecting liquid, used 
+                         for operating rooms and clinics, in addition to ultraviolet
+                         light. This mist reaches all corners and 
+                         places of the environment</p>
+                    <ul>
+                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Quick and safe procedure</a></li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">High level of sanitation</a></li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Microparticles that disinfect places of difficult access</a></li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Ideal for clinics, offices and beauty salons</a></li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Can be used in homes and vehicles</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--Video nebulization--> 
+<section class="video col justify-content-center">
+    <div class="text-center">
+        <h2>What is nebulization disinfection?</h2>
+        <video src="./video/nebulization-disinfection.webm" controls preload>
+        </video>
+    </div>
+</section>
               
     <!--============================= SERVICES =============================-->
     <section class="service-title" id="services">
@@ -357,39 +403,7 @@
             </div>
         </div>
     </section>
-<!-- Object img Sec 04 -->
-<section class="service" id="nebulization">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="service-link service-link1">
-                    <h3><span>Nebulization disinfection</span></h3>
-                    <p>Some viruses and bacteria can remain on surfaces for a long time. Due to the quarantine, 
-                        many places have been closed and need deep cleaning and disinfection in all corners.
-                         The nebulization disinfection technique consists of using a disinfecting liquid, used 
-                         for operating rooms and clinics, in addition to ultraviolet
-                         light. This mist reaches all corners and 
-                         places of the environment</p>
-                    <ul>
-                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Quick and safe procedure</a></li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">High level of sanitation</a></li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Microparticles that disinfect places of difficult access</a></li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Ideal for clinics, offices and beauty salons</a></li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Can be used in homes and vehicles</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6"></div>
-        </div>
-    </div>
-    <div class="img-objectfit_1">
-        <div class="grid">
-            <figure class="effect-lily">
-                <img src="imagenes/clinic.jpg" class="img-fluid" alt="#">
-            </figure>
-        </div>
-    </div>
-</section>
+<!-------Fin seccion servicios-->
 <section class="cv" id="about">
         <h2>About CleanWorld</h2>
     <div class="blocks row">
@@ -401,12 +415,16 @@
             even more customers to provide a better cleaning service to more of Edinburgh..</p> 
     </div>
     <div class="col-sm-4">
+        <figure class="effect-lily">
         <img class="perfil" src="./imagenes/Francisco-2.jpeg" alt="">
+    </figure>
     </div>
 </div>
     <div class="blocks row">
             <div class="col-sm-6">
+                <figure class="effect-lily">
                 <img src="./imagenes/team-about.jpg" alt="">
+                </figure>
             </div> 
         
             <div class="col-sm-6 service-link service-link1">

@@ -73,7 +73,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="contact.html">Contact </a>
                                 </li>
-                                <li><a href="book-clean.html" class="btn btn-info">Book a Quote</a></li>
+                                <li><a href="book-clean.php" class="btn btn-info">Book a Quote</a></li>
                             </ul>
                             <div class="social-icons">
                                 <a href="https://www.facebook.com/profile.php?id=100010690062950"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -94,7 +94,7 @@
                         <h1>Clean and Safe</h1>
                         <h3>Book expert space cleaning and handymen at a moment's notice. Just pick a time and we’ll do the rest.</h3>
                             <div class="btn-group" role="group" data-aos="flip-up" data-aos-delay="2000" data-aos-easing="linear">
-                            <li><a href="book-clean.html" class="btn-front" >Book a Quote</a></li>
+                            <li><a href="book-clean.php" class="btn-front" >Book a Quote</a></li>
                             </div>
                     </div>
                 </div>
@@ -449,7 +449,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="call-action">
-                    <a href="book-clean.html" class="btn btn-info">Book a Quote</a>
+                    <a href="book-clean.php" class="btn btn-info">Book a Quote</a>
                 </div>
             </div>
         </div>

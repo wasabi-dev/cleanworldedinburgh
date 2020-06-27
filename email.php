@@ -26,10 +26,8 @@ $preferedTime=$_POST['preferedTime'];
 $street=$_POST['street'];
 $typeClean=$_POST['typeClean'];
 
-
 $mail = new PHPMailer(true);
 
-try {
     //Server settings
     $mail->SMTPDebug = 0;//SMTP::DEBUG_SERVER;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
@@ -37,7 +35,7 @@ try {
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'info@cleanworldedinburgh.com';                     // SMTP username
     $mail->Password   = 'hjFq$9341';                               // SMTP password
-    $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+    $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
@@ -46,7 +44,7 @@ try {
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Cleaning requered from ';
+    $mail->Subject = 'Cleaning requered from '. $name;
     $mail->Body    = "Name: $name  $lastName <br/><br/>".
                      "Email: $email <br/><br/>".
                      "Phone: $phone <br/><br/>".
@@ -63,11 +61,25 @@ try {
                      "Comments: $comments <br/><br/>".
                      "Details to the areas: $details \n\n";
                      
-    $mail->send();
-    echo 'Message has been sent';
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-}
+    $sent=$mail->send();
+
+    if ($sent){
+        $response=[
+            'response'=>'Message has been sent',
+            'status'=>200
+        ];
+    }
+    else{
+        $response=[
+            'response'=>'Message has not been sent',
+            'status'=>404
+        ];
+    }
+
+    die(json_encode($response));
+
+
+   // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 
 
 ?>

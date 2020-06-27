@@ -89,7 +89,8 @@ label{
 .notification{
     position: fixed;
     z-index: 100;
-    right: 6rem;
+    bottom: 10px;
+    left: 10px;
     padding: 1.5rem 2rem;
     opacity: 0;
     transition: opacity .5s ease;
@@ -213,6 +214,7 @@ label{
     color: #3f4b5e;
     margin: 0 0 30px;
 }
+
 
     
 

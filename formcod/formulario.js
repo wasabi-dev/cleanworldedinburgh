@@ -25,11 +25,7 @@ export default class Frame {
     form.append('street',this.data.street);
     form.append('typeClean',this.data.typeClean);
       
-     fetch('email.php',{
-         method:'POST',
-         body:form
-     }).then(res=>{
-       return res.json();
+     fetch('email.php'   return res.json();
      }).then(data=>{
        if(data.status===200){
         this.showMessage(data.response,'notification-exit');

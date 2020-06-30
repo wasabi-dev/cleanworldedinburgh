@@ -229,15 +229,26 @@ label{
     -o-transition: 0.3s;
     transition: 0.3s;
     opacity: 1; 
+    background-color: #2ce6a9;
+    padding: 1em; 
+    text-align: center;
+    line-height: 1;
   }
     .social-icons a i {
       text-align: center;
       display: block;
-      padding: 13px 0; }
+      padding: 23px 0;
+      
+    }
     .social-icons a:hover {
       text-decoration: none;
       background-color: #358474;
       opacity: 0.6; }
+.fa {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      text-rendering: auto;
+      }
 
     
 

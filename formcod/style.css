@@ -215,6 +215,29 @@ label{
     margin: 0 0 30px;
 }
 
+.social-icons {
+  margin-left: 0.5em; 
+}
+  .social-icons a {
+    width: 43px;
+    height: 43px;
+    background: 2ce6a9;
+    color: white;
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 1; 
+  }
+    .social-icons a i {
+      text-align: center;
+      display: block;
+      padding: 13px 0; }
+    .social-icons a:hover {
+      text-decoration: none;
+      background-color: #358474;
+      opacity: 0.6; }
 
     
 

@@ -57,7 +57,7 @@ $(function() {
                 event.preventDefault();
                 $('html, body').animate({
                     scrollTop: target.offset().top
-                }, 2000, function() {
+                }, 1000, function() {
                     // Callback after animation
                     // Must change focus!
                     var $target = $(target);

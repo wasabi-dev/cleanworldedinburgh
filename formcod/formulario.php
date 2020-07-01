@@ -24,28 +24,30 @@
 
         # FIX: Replace this email with recipient email
         $mail_to = "info@cleanworldedinburgh.com";
-           # Sender Data
-           $subject = "You have a new message: ";
         
-           $name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));
-    
-           $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-           $message = "Name: $name  $lastName <br/><br/>".
-           "Email: $email <br/><br/>".
-           "Phone: $phone <br/><br/>".
-           "Street: $street <br/><br/>".
-           "Address: $address <br/><br/>".
-           "Postal Code: $code <br/><br/>".
-           "Type Clean: $typeClean <br/><br/>".
-           "Hours por Clean: $hours <br/><br/>".
-           "How Often?: $often <br/><br/>".
-           "Bedrooms: $bedrooms <br/><br/>".
-           "Extras: $extras <br/><br/>".
-           "Prefered Day: $preferedDay <br/><br/>".
-           "Prefered Time: $preferedTime <br/><br/>".
-           "Comments: $comments <br/><br/>".
-           "Details to the areas: $details \n\n";
-           if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($subject) OR empty($message)) {
+        # Sender Data
+        $subject = "You have a new message: ";
+        
+        $name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));
+ 
+        $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+        $message = "Name: $name  $lastName <br/><br/>".
+        "Email: $email <br/><br/>".
+        "Phone: $phone <br/><br/>".
+        "Street: $street <br/><br/>".
+        "Address: $address <br/><br/>".
+        "Postal Code: $code <br/><br/>".
+        "Type Clean: $typeClean <br/><br/>".
+        "Hours por Clean: $hours <br/><br/>".
+        "How Often?: $often <br/><br/>".
+        "Bedrooms: $bedrooms <br/><br/>".
+        "Extras: $extras <br/><br/>".
+        "Prefered Day: $preferedDay <br/><br/>".
+        "Prefered Time: $preferedTime <br/><br/>".
+        "Comments: $comments <br/><br/>".
+        "Details to the areas: $details \n\n";
+        
+        if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($subject) OR empty($message)) {
             # Set a 400 (bad request) response code and exit.
             http_response_code(400);
             echo "Please complete the form and try again.";
@@ -61,6 +63,7 @@
         $headers = "From: $name <$email>";
 
         # Send the email.
+
         $success = mail($mail_to, $subject, $content, $headers);
 
 

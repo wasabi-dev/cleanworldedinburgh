@@ -89,8 +89,7 @@ label{
 .notification{
     position: fixed;
     z-index: 100;
-    bottom: 10px;
-    left: 10px;
+    right: 6rem;
     padding: 1.5rem 2rem;
     opacity: 0;
     transition: opacity .5s ease;
@@ -249,11 +248,53 @@ label{
       font: normal normal normal 14px/1 FontAwesome;
       text-rendering: auto;
       }
+/* ==============================================================
+   FOOTER
+   ============================================================== */
+   footer {
+     display: block;
+    background: #45d397;
+    padding: 40px 0;
+    margin-top: 2em;
+  }
+  
+  footer p {
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .foot-box {
+      margin: 0 0 36px;
+    }
+  }
+  
+  .foot-box h6 {
+    color: #ffffff;
+    margin-bottom: 22px;
+  }
+  
+  .foot-box ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .foot-box ul li {
+    list-style: none;
+    color: #ffffff;
+    line-height: 2;
+  }
+  
+  .foot-box ul li a {
+    color: #ffffff;
+    line-height: 2;
+  }
+  
+  .subscribe h6 {
+    color: #ffffff;
+    margin-bottom: 22px;
+  }
 
-
-
-
-    
+ 
 
 
 

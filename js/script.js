@@ -56,7 +56,7 @@ $(function() {
                 // Only prevent default if animation is actually gonna happen
                 event.preventDefault();
                 $('html, body').animate({
-                    scrollTop: target.offset().top
+                    scrollTop: target.offset().top -150
                 }, 1000, function() {
                     // Callback after animation
                     // Must change focus!
@@ -65,7 +65,7 @@ $(function() {
                     if ($target.is(":focus")) { // Checking if the target was focused
                         return false;
                     } else {
-                        $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                        $target.attr('tabindex', '-15'); // Adding tabindex for elements not focusable
                         $target.focus(); // Set focus again
                     };
                 });

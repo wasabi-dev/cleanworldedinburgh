@@ -22,31 +22,29 @@ function listener() {
       frame.send();
     }
   });
+//when the user change the inputs
+campos.forEach((campo) => {
+  campo.addEventListener("change", onChange);
+});
 
-  //when the user change the inputs
-  campos.forEach((campo) => {
-    campo.addEventListener("change", onChange);
-  });
+//When the user select outside of the input
+campos.forEach((input) => {
+  input.addEventListener("blur", required);
+});
 
-  //When the user select outside of the input
-  campos.forEach((input) => {
-    input.addEventListener("blur", required);
-  });
-
-  //when the user change the radios
-  radios.forEach((radio) => {
-    radio.addEventListener("change", onChangeRadio);
-  });
+//when the user change the radios
+radios.forEach((radio) => {
+  radio.addEventListener("change", onChangeRadio);
+});
 }
 
 //when a input is changed
 function onChange(e) {
-  datos = {
-    ...datos,
-    [e.target.name]: e.target.value,
-  };
+datos = {
+  ...datos,
+  [e.target.name]: e.target.value,
+};
 }
-
 function onChangeRadio(e) {
   if (e.target.checked) {
     datos = {
@@ -68,7 +66,6 @@ function required(e) {
     element.classList.add("exit");
   }
 }
-
 // only a checkbox can be selected
 function onlyOne() {
   let standar = document.querySelector("#standar");
@@ -96,7 +93,6 @@ function validateText() {
       error = true;
     }
   });
-
   return error;
 }
 

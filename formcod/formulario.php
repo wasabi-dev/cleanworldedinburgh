@@ -1,7 +1,7 @@
 <?php
 
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        var_dump($_POST); die();
         $address=$_POST['address'];
         $bedrooms=$_POST['bedrooms'];
         $bathrooms=$_POST['bathrooms'];
@@ -24,42 +24,32 @@
 
         # FIX: Replace this email with recipient email
         $mail_to = "info@cleanworldedinburgh.com";
+           # Sender Data
+           $subject = "You have a new message: ";
         
-        # Sender Data
-        $subject = "You have a new message: ";
-        
-        //$name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));
- 
-        $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-        $message = "Name: $name  $lastName <br/><br/>".
-        "Email: $email <br/><br/>".
-        "Phone: $phone <br/><br/>".
-        "Street: $street <br/><br/>".
-        "Address: $address <br/><br/>".
-        "Postal Code: $code <br/><br/>".
-        "Type Clean: $typeClean <br/><br/>".
-        "Hours por Clean: $hours <br/><br/>".
-        "How Often?: $often <br/><br/>".
-        "Bedrooms: $bedrooms <br/><br/>".
-        "Extras: $extras <br/><br/>".
-        "Prefered Day: $preferedDay <br/><br/>".
-        "Prefered Time: $preferedTime <br/><br/>".
-        "Comments: $comments <br/><br/>".
-        "Details to the areas: $details \n\n";
-
-        $validationName=empty($name);
-        $validationEmail=filter_var($email, FILTER_VALIDATE_EMAIL);
-        $validationSubjet=empty($subject);
-        $validationMessage=empty($message);
-        
-        if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($subject) OR empty($message)) {
+           $name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));
+    
+           $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+           $message = "Name: $name  $lastName <br/><br/>".
+           "Email: $email <br/><br/>".
+           "Phone: $phone <br/><br/>".
+           "Street: $street <br/><br/>".
+           "Address: $address <br/><br/>".
+           "Postal Code: $code <br/><br/>".
+           "Type Clean: $typeClean <br/><br/>".
+           "Hours por Clean: $hours <br/><br/>".
+           "How Often?: $often <br/><br/>".
+           "Bedrooms: $bedrooms <br/><br/>".
+           "Extras: $extras <br/><br/>".
+           "Prefered Day: $preferedDay <br/><br/>".
+           "Prefered Time: $preferedTime <br/><br/>".
+           "Comments: $comments <br/><br/>".
+           "Details to the areas: $details \n\n";
+           if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($subject) OR empty($message)) {
             # Set a 400 (bad request) response code and exit.
             http_response_code(400);
-            $response=[
-                'response'=>'All fields are requered'
-            ];
-            die(json_encode($response));
-            //exit;
+            echo "Please complete the form and try again.";
+            exit;
         }
         
         # Mail Content
@@ -71,35 +61,24 @@
         $headers = "From: $name <$email>";
 
         # Send the email.
-
         $success = mail($mail_to, $subject, $content, $headers);
 
 
         if ($success) {
             # Set a 200 (okay) response code.
             http_response_code(200);
-            $response=[
-                'response'=>'The message has been sent'
-            ];
-            die(json_encode($response));
-
-            //echo "Thank you! Your message was sent correctly.";
+            echo "Thank you! Your message was sent correctly.";
         } else {
             # Set a 500 (internal server error) response code.
+            die(json_encode($success));
             http_response_code(500);
-            $response=[
-                'response'=>'The message has not been sent'
-            ];
-            die(json_encode($response));
+            echo "Oops! Something went wrong, we couldn't send your message.";
         }
 
     } else {
         # Not a POST request, set a 403 (forbidden) response code.
         http_response_code(403);
-        $response=[
-            'response'=>'Server not found'
-        ];
-        die(json_encode($response));
+        echo "There was a problem with your submission, please try again.";
     }
 
 ?>

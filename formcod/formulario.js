@@ -24,25 +24,24 @@ export default class Frame {
     form.append('preferedTime',this.data.preferedTime);
     form.append('street',this.data.street);
     form.append('typeClean',this.data.typeClean);
-      
-     fetch('email.php',{
-         method:'POST',
-         body:form
-     }).then(res=>{
-      return res.json();
-    }).then(data=>{
-      if(data.status===200){
-       this.showMessage(data.response,'notification-exit');
-       this.clean();
-      }
-      else{
-       this.showMessage(data.response,'notification-error');
-       this.clean();
-      }
-    });
- }
+    fetch('formulario.php',{
+      method:'POST',
+      body:form
+  }).then(res=>{
+      if (res.status===200) {
+       console.log(res);
 
- showMessage(message,status){
+        this.showMessage('Message has been sent','notification-exit');
+        this.clean();
+      }
+      else
+      {
+       this.showMessage('Message has not been sent','notification-error');
+      }
+  })
+   
+}
+showMessage(message,status){
   const page=document.querySelector('body');
   const dialog=document.createElement('div');
   dialog.classList.add('notification',status);
@@ -50,10 +49,9 @@ export default class Frame {
 
   page.insertBefore(dialog, document.querySelector('.container'));
 
-  page.insertBefore(dialog, document.querySelector('.whatsapp'));
-  dialog.classList.add('visible');
   setTimeout(()=>{
     dialog.classList.add('visible');
+
     setTimeout(()=>{
       dialog.classList.remove('visible');
       setTimeout(() => {
@@ -61,8 +59,9 @@ export default class Frame {
    }, 500);
     },3000);
   },100);
-  
+    
 }
+
 clean(){
   const fields=document.querySelectorAll('input,textarea,select');
   fields.forEach(field=>{
@@ -70,4 +69,6 @@ clean(){
     field.classList.remove('exit');
   })
 }
+
 }
+  

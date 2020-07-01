@@ -126,7 +126,7 @@
                 </div>
                 <div class="lbl"><label for="service" class="ml-3 mt-2">Select type cleaning service *</label>
                     <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="radio" class="" id="standar" value="standar">
+                        <input type="radio" class="" id="standar" value="standard">
                         <label class="" for="defaultInline1">Standard Clean</label>
                     </div>
     

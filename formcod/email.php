@@ -61,25 +61,11 @@ $mail = new PHPMailer(true);
                      "Comments: $comments <br/><br/>".
                      "Details to the areas: $details \n\n";
                      
-    $sent=$mail->send();
-
-    if ($sent){
-        $response=[
-            'response'=>'Message has been sent',
-            'status'=>200
-        ];
-    }
-    else{
-        $response=[
-            'response'=>'Message has not been sent',
-            'status'=>404
-        ];
-    }
-
-    die(json_encode($response));
-
-
-   // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-
-
+                     $mail->send();
+                     echo 'Message has been sent';
+                 } catch (Exception $e) {
+                     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                 }
+                 
+                 
 ?>

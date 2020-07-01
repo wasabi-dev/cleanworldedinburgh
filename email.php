@@ -26,8 +26,10 @@ $preferedTime=$_POST['preferedTime'];
 $street=$_POST['street'];
 $typeClean=$_POST['typeClean'];
 
+
 $mail = new PHPMailer(true);
 
+try {
     //Server settings
     $mail->SMTPDebug = 0;//SMTP::DEBUG_SERVER;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
@@ -35,7 +37,7 @@ $mail = new PHPMailer(true);
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'info@cleanworldedinburgh.com';                     // SMTP username
     $mail->Password   = 'hjFq$9341';                               // SMTP password
-    $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+    $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
@@ -44,7 +46,7 @@ $mail = new PHPMailer(true);
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Cleaning requered from '. $name;
+    $mail->Subject = 'Cleaning requered from ';
     $mail->Body    = "Name: $name  $lastName <br/><br/>".
                      "Email: $email <br/><br/>".
                      "Phone: $phone <br/><br/>".
@@ -61,9 +63,11 @@ $mail = new PHPMailer(true);
                      "Comments: $comments <br/><br/>".
                      "Details to the areas: $details \n\n";
                      
-                     $mail->send();
-                     echo 'Message has been sent';
-                 } catch (Exception $e) {
-                     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-                 }
+    $mail->send();
+    echo 'Message has been sent';
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
+
+
 ?>

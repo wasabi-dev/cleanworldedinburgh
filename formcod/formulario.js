@@ -25,17 +25,20 @@ export default class Frame {
     form.append('street',this.data.street);
     form.append('typeClean',this.data.typeClean);
       
-     fetch('email.php'   return res.json();
-     }).then(data=>{
-       if(data.status===200){
-        this.showMessage(data.response,'notification-exit');
-        this.clean();
-       }
-       else{
-        this.showMessage(data.response,'notification-error');
-        this.clean();
-       }
-     });
+     fetch('email.php',{
+         method:'POST',
+         body:form
+     }).then(res=>{
+         if (res.status===200) {
+           this.showMessage('Message has been sent','notification-exit');
+           this.clean();
+         }
+         else
+         {
+          this.showMessage('Message has not been sent','notification-error');
+         }
+     })
+      
   }
 
   showMessage(message,status){
@@ -44,9 +47,7 @@ export default class Frame {
     dialog.classList.add('notification',status);
     dialog.textContent=message;
 
-
-    page.insertBefore(dialog, document.querySelector('.whatsapp'));
-    dialog.classList.add('visible');
+    page.insertBefore(dialog, document.querySelector('.container'));
 
     setTimeout(()=>{
       dialog.classList.add('visible');
@@ -72,4 +73,6 @@ export default class Frame {
 }
     
    
+
+
 

@@ -56,7 +56,7 @@ export default class Frame {
         dialog.classList.remove('visible');
         setTimeout(() => {
           dialog.remove();
-     }, 500);
+     }, 1500);
       },3000);
     },100);
     

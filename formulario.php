@@ -27,7 +27,7 @@
         # Sender Data
         $subject = "You have a new message: ";
         
-        $name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));
+        //$name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));
  
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
         $message = "Name: $name  $lastName <br/><br/>".

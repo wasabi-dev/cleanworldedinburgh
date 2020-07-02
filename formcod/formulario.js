@@ -25,13 +25,12 @@ export default class Frame {
     form.append('street',this.data.street);
     form.append('typeClean',this.data.typeClean);
       
-     fetch('email.php',{
+     fetch('formulario.php',{
          method:'POST',
          body:form
      }).then(res=>{
          if (res.status===200) {
-          console.log(res);
-
+          
            this.showMessage('Message has been sent','notification-exit');
            this.clean();
          }
@@ -49,7 +48,8 @@ export default class Frame {
     dialog.classList.add('notification',status);
     dialog.textContent=message;
 
-    page.insertBefore(dialog, document.querySelector('.container'));
+    page.insertBefore(dialog, document.querySelector('.whatsapp'));
+    dialog.classList.add('visible');
 
     setTimeout(()=>{
       dialog.classList.add('visible');

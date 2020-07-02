@@ -29,7 +29,7 @@ $typeClean=$_POST['typeClean'];
 
 $mail = new PHPMailer(true);
 
-try {
+
     //Server settings
     $mail->SMTPDebug = 0;//SMTP::DEBUG_SERVER;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP

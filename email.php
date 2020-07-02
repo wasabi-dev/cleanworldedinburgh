@@ -61,10 +61,9 @@ $mail = new PHPMailer(true);
                      "Prefered Day: $preferedDay <br/><br/>".
                      "Prefered Time: $preferedTime <br/><br/>".
                      "Comments: $comments <br/><br/>".
-                     "Details to the areas: $details \n\n";
+                     "Details to the areas: $details <br/><br/>".
                      
                      $sent=$mail->send();
-
                      if ($sent){
                          $response=[
                              'response'=>'Message has been sent',
@@ -77,11 +76,6 @@ $mail = new PHPMailer(true);
                              'status'=>404
                          ];
                      }
-                 
                      die(json_encode($response));
-                 
-                 
                     // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-                 
-                 
 ?>

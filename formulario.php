@@ -45,12 +45,20 @@
         "Prefered Time: $preferedTime <br/><br/>".
         "Comments: $comments <br/><br/>".
         "Details to the areas: $details \n\n";
+
+        $validationName=empty($name);
+        $validationEmail=filter_var($email, FILTER_VALIDATE_EMAIL);
+        $validationSubjet=empty($subject);
+        $validationMessage=empty($message);
         
         if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($subject) OR empty($message)) {
             # Set a 400 (bad request) response code and exit.
             http_response_code(400);
-            echo "Please complete the form and try again.";
-            exit;
+            $response=[
+                'response'=>'All fields are requered'
+            ];
+            die(json_encode($response));
+            //exit;
         }
         
         # Mail Content
@@ -62,25 +70,35 @@
         $headers = "From: $name <$email>";
 
         # Send the email.
-
         $success = mail($mail_to, $subject, $content, $headers);
 
 
         if ($success) {
             # Set a 200 (okay) response code.
             http_response_code(200);
-            echo "Thank you! Your message was sent correctly.";
+            $response=[
+                'response'=>'The message has been sent'
+            ];
+            die(json_encode($response));
+
+            //echo "Thank you! Your message was sent correctly.";
         } else {
             # Set a 500 (internal server error) response code.
-            die(json_encode($success));
             http_response_code(500);
-            echo "Oops! Something went wrong, we couldn't send your message.";
+            $response=[
+                'response'=>'The message has not been sent'
+            ];
+            die(json_encode($response));
         }
 
     } else {
         # Not a POST request, set a 403 (forbidden) response code.
         http_response_code(403);
-        echo "There was a problem with your submission, please try again.";
+        $response=[
+            'response'=>'Server not found'
+        ];
+        die(json_encode($response));
     }
-
-?>
+    ?>
+         
+        

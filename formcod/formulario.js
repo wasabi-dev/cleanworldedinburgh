@@ -30,7 +30,8 @@ export default class Frame {
          body:form
      }).then(res=>{
          if (res.status===200) {
-          
+         
+
            this.showMessage('Message has been sent','notification-exit');
            this.clean();
          }
@@ -47,13 +48,10 @@ export default class Frame {
     const dialog=document.createElement('div');
     dialog.classList.add('notification',status);
     dialog.textContent=message;
-
     page.insertBefore(dialog, document.querySelector('.whatsapp'));
     dialog.classList.add('visible');
-
     setTimeout(()=>{
       dialog.classList.add('visible');
-
       setTimeout(()=>{
         dialog.classList.remove('visible');
         setTimeout(() => {
@@ -63,7 +61,6 @@ export default class Frame {
     },100);
     
   }
-
   clean(){
     const fields=document.querySelectorAll('input,textarea,select');
     fields.forEach(field=>{
@@ -71,8 +68,6 @@ export default class Frame {
       field.classList.remove('exit');
     })
   }
-
 }
     
    
-

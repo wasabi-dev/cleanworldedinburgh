@@ -17,8 +17,8 @@
     integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
 <!-- Main CSS -->
-    <link rel="stylesheet" href="/formcod/style.css">
-    <link rel="icon" href="/imagenes/favicon3.ico" />
+    <link rel="stylesheet" href="formcod/style.css">
+    <link rel="icon" href="imagenes/favicon3.ico" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162780618-3"></script>
 <script>
@@ -73,7 +73,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="contact.html">Contact </a>
                                 </li>
-                                <li><a href="book-clean.html" class="btn btn-info">Book a Quote</a></li>
+                                <li><a href="book-clean.php" class="btn btn-info">Book a Quote</a></li>
                             </ul>
                             <div class="social-icons">
                                 <a href="https://www.facebook.com/Clean-World-Edinburgh-106179654487072/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
@@ -100,7 +100,7 @@
 
         <!-------Personal details------>
         <div class="container">
-            <form action="email.php" id="frm" class="frm container">
+            <form action="" id="frm" class="frm container">
                 <div class="lbl"><label for="first-name" class="ml-3">Name*</label></div>
                 <div class="d-flex justify-content-center">
                     <input type="text" id="name" name="name" class="w-50 mr-1 pl-2 campo" placeholder="First name">

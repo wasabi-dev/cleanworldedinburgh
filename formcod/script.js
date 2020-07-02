@@ -1,4 +1,4 @@
-import Frame from "formulario.js";
+import Frame from "./formulario.js";
 
 const frm = document.querySelector("#frm");
 const campos = document.querySelectorAll(".campo");

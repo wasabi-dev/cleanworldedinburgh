@@ -25,38 +25,40 @@ export default class Frame {
     form.append('street',this.data.street);
     form.append('typeClean',this.data.typeClean);
       
-     fetch('formulario.php',{
+     fetch('email.php',{
          method:'POST',
          body:form
-     }).then(res=>{
-         if (res.status===200) {
-         
-
-           this.showMessage('Message has been sent','notification-exit');
+        }).then(res=>{
+          return res.json();
+        }).then(data=>{
+          if(data.status===200){
+           this.showMessage(data.response,'notification-exit');
            this.clean();
-         }
-         else
-         {
-          this.showMessage('Message has not been sent','notification-error');
-         }
-     })
-      
-  }
+          }
+          else{
+           this.showMessage(data.response,'notification-error');
+           this.clean();
+          }
+        });
+     }
 
   showMessage(message,status){
     const page=document.querySelector('body');
     const dialog=document.createElement('div');
     dialog.classList.add('notification',status);
     dialog.textContent=message;
+
     page.insertBefore(dialog, document.querySelector('.whatsapp'));
     dialog.classList.add('visible');
+
     setTimeout(()=>{
       dialog.classList.add('visible');
+
       setTimeout(()=>{
         dialog.classList.remove('visible');
         setTimeout(() => {
           dialog.remove();
-     }, 1500);
+     }, 500);
       },3000);
     },100);
     

@@ -46,7 +46,7 @@ $mail = new PHPMailer(true);
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Cleaning requered from ';
+    $mail->Subject = 'Cleaning requered from '. $name;
     $mail->Body    = "Name: $name  $lastName <br/><br/>".
                      "Email: $email <br/><br/>".
                      "Phone: $phone <br/><br/>".
@@ -84,4 +84,4 @@ $mail = new PHPMailer(true);
                     // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
                  
                  
-                 ?>
+?>

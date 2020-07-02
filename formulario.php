@@ -24,7 +24,7 @@
         # FIX: Replace this email with recipient email
         $mail_to = "info@cleanworldedinburgh.com";
         
-        # Sender Data
+        # Sender Dat
         $subject = "You have a new message: ";
         
         //$name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));

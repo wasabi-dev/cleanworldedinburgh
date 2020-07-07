@@ -76,7 +76,7 @@
                                 <li><a href="book-clean.php" class="btn btn-info">Book a Quote</a></li>
                             </ul>
                             <div class="social-icons">
-                                <a href="https://www.facebook.com/Clean-World-Edinburgh-106179654487072/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                                <a href="https://www.facebook.com/CleanWorldEdinburghUK/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </nav>
@@ -137,7 +137,7 @@
                     </div>
                 </div>
     
-                <div id="standard">
+                <div id="estandard">
                     <div class="lbl"><label for="hours" class="ml-3 mt-2">How many hours per clean? *</label></div>
                     <div class="d-flex justify-content-center mt-2">
                         <select name="hours" class="w-100 campo" id="hours">
@@ -302,6 +302,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
  integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
 <script src="formcod/script.js" type="module"></script>
+
     
 
 </body>

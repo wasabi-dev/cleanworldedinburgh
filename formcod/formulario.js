@@ -2,9 +2,7 @@ export default class Frame {
   constructor(data) {
        this.data=data;
   }
-
   send(){    
-
     const form=new FormData();
     form.append('address',this.data.address);
     form.append('bedrooms',this.data.bedrooms);
@@ -24,52 +22,49 @@ export default class Frame {
     form.append('preferedTime',this.data.preferedTime);
     form.append('street',this.data.street);
     form.append('typeClean',this.data.typeClean);
-      
-     fetch('email.php',{
-         method:'POST',
-         body:form
-        }).then(res=>{
-          return res.json();
-        }).then(data=>{
-          if(data.status===200){
-           this.showMessage(data.response,'notification-exit');
-           this.clean();
-          }
-          else{
-           this.showMessage(data.response,'notification-error');
-           this.clean();
-          }
-        });
+
+    fetch('email.php',{
+      method:'POST',
+      body:form
+  }).then(res=>{
+    return res.json();
+  }).then(data=>{
+    if (data.response==='The message has been sent') {
+      this.showMessage(data.response,'notification-exit');
+      this.clean(); 
      }
-
-  showMessage(message,status){
-    const page=document.querySelector('body');
-    const dialog=document.createElement('div');
-    dialog.classList.add('notification',status);
-    dialog.textContent=message;
-
-    page.insertBefore(dialog, document.querySelector('.whatsapp'));
-    dialog.classList.add('visible');
-
-    setTimeout(()=>{
-      dialog.classList.add('visible');
-
-      setTimeout(()=>{
-        dialog.classList.remove('visible');
-        setTimeout(() => {
-          dialog.remove();
-     }, 500);
-      },3000);
-    },100);
-    
-  }
-  clean(){
-    const fields=document.querySelectorAll('input,textarea,select');
-    fields.forEach(field=>{
-      field.value='';
-      field.classList.remove('exit');
-    })
-  }
+     else{
+      this.showMessage(data.response,'notification-error');
+     }
+   });      
 }
-    
-   
+
+ showMessage(message,status){
+  const page=document.querySelector('body');
+  const dialog=document.createElement('div');
+  dialog.classList.add('notification',status);
+  dialog.textContent=message;
+  page.insertBefore(dialog, document.querySelector('.whatsapp'));
+  dialog.classList.add('visible');
+  setTimeout(()=>{
+    dialog.classList.add('visible');
+    setTimeout(()=>{
+      dialog.classList.remove('visible');
+      setTimeout(() => {
+        dialog.remove();
+   }, 500);
+    },3000);
+  },100);
+  
+}
+clean(){
+  const fields=document.querySelectorAll('input,textarea,select');
+  fields.forEach(field=>{
+    field.value='';
+    field.classList.remove('exit');
+  })
+}
+}
+
+
+  

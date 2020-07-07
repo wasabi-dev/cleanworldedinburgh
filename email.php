@@ -33,16 +33,16 @@ try {
     //Server settings
     $mail->SMTPDebug = 0;//SMTP::DEBUG_SERVER;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
-    $mail->Host       = 'mail.netcytecno.com';                    // Set the SMTP server to send through
+    $mail->Host       = 'mail.cleanworldedinburgh.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'info@netcytecno.com';                     // SMTP username
-    $mail->Password   = 'passwasabi20';                               // SMTP password
+    $mail->Username   = 'info@cleanworldedinburgh.com';                     // SMTP username
+    $mail->Password   = 'hjFq$9341';                               // SMTP password
     $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
     $mail->setFrom($email, $name);
-    $mail->addAddress('info@netcytecno.com', 'Cynty');     // Add a recipient
+    $mail->addAddress('info@cleanworldedinburgh.com', 'Cleanworldedinburgh');     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML

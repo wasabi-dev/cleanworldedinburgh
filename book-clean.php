@@ -131,8 +131,7 @@
                         <label class="" for="defaultInline2">Disinfection Services</label>
                     </div>
                 </div>
-    
-                <div id="standard">
+
                     <div class="lbl"><label for="hours" class="ml-3 mt-2">How many hours per clean? *</label></div>
                     <div class="d-flex justify-content-center mt-2">
                         <select name="hours" class="w-100 campo" id="hours">
@@ -228,7 +227,7 @@
                     <div class="d-flex justify-content-end">
                         <button type="submit" class="mt-3 bg-dark text-white py-1 px-4 btn-submit">Submit</button>
                     </div>
-                </div>
+              
             </form>
         </div>
  <!--============================= FOOTER =============================-->

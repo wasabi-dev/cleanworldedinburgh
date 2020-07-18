@@ -30,20 +30,33 @@
 
         # Send the email.
         $success = mail($mail_to, $subject, $content, $headers);
+        
+        
         if ($success) {
             # Set a 200 (okay) response code.
             http_response_code(200);
-            echo "Thank you! Your message was sent correctly.";
+            http_response_code(200);
+            echo '<script language="javascript">
+            alert("Thanks! We will contact you soon");
+            window.location= "contact.html"
+            </script>';
+
         } else {
             # Set a 500 (internal server error) response code.
             http_response_code(500);
-            echo "Oops! Something went wrong, we couldn't send your message.";
+            echo '<script language="javascript">
+            alert("Oops! Something went wrong, please try again later.");
+            window.location= "contact.html"
+            </script>';
         }
 
     } else {
         # Not a POST request, set a 403 (forbidden) response code.
         http_response_code(403);
-        echo "There was a problem with your submission, please try again.";
+        echo '<script language="javascript">
+        alert("Oops! Something went wrong, please try again.");
+        window.location= "contact.html"
+        </script>';
     }
 
 ?>

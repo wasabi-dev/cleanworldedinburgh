@@ -21,7 +21,9 @@ h1{
     margin: 0 auto;
     max-width: 800px;
 }
-
+a{
+  color: white;
+}
 
 form input,select,textarea{
     border-radius: 8px;

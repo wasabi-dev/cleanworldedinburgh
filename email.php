@@ -40,16 +40,16 @@ $mail = new PHPMailer(true);
              'allow_self_signed' => true
          ]
      ]);                                       // Send using SMTP                                           // Send using SMTP
-    $mail->Host       = 'mail.netcytecno.com';                    // Set the SMTP server to send through
+    $mail->Host       = 'mail.cleanworldedinburgh.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'info@netcytecno.com';                     // SMTP username
-    $mail->Password   = 'passwasabi20';                               // SMTP password hjFq$9341
+    $mail->Username   = 'info@cleanworldedinburgh.com';                     // SMTP username
+    $mail->Password   = 'hjFq$9341';                               // SMTP password 
     $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
     $mail->setFrom($email, $name);
-    $mail->addAddress('info@netcytecno.com', 'Clean World Edinburgh');     // Add a recipient
+    $mail->addAddress('info@cleanworldedinburgh.com', 'Clean World Edinburgh');     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML

@@ -25,7 +25,7 @@ export default class Frame {
     form.append('street',this.data.street);
     form.append('typeClean',this.data.typeClean);
       
-    fetch('email.php',{
+    fetch('formcod/email.php',{
       method:'POST',
       body:form
   }).then(res=>{

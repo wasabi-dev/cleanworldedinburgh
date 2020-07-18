@@ -2,6 +2,7 @@
 
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        
         $address=$_POST['address'];
         $bedrooms=$_POST['bedrooms'];
         $bathrooms=$_POST['bathrooms'];

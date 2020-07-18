@@ -24,8 +24,7 @@ export default class Frame {
     form.append('preferedTime',this.data.preferedTime);
     form.append('street',this.data.street);
     form.append('typeClean',this.data.typeClean);
-      
-    fetch('formcod/email.php',{
+    fetch('email.php',{
       method:'POST',
       body:form
   }).then(res=>{
@@ -41,7 +40,6 @@ export default class Frame {
     }
   });
 }
-
 
   showMessage(message,status){
     const page=document.querySelector('body');

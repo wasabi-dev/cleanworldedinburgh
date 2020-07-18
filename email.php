@@ -32,7 +32,14 @@ $mail = new PHPMailer(true);
 
     //Server settings
     $mail->SMTPDebug = 0;//SMTP::DEBUG_SERVER;                      // Enable verbose debug output
-    $mail->isSMTP();                                            // Send using SMTP
+    $mail->isSMTP(); 
+    $mail->smtpConnect([
+        'ssl' => [
+             'verify_peer' => false,
+             'verify_peer_name' => false,
+             'allow_self_signed' => true
+         ]
+     ]);                                       // Send using SMTP                                           // Send using SMTP
     $mail->Host       = 'mail.netcytecno.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'info@netcytecno.com';                     // SMTP username
@@ -46,7 +53,7 @@ $mail = new PHPMailer(true);
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Cleaning requered from ';
+    $mail->Subject = 'Cleaning requered from '. $name;
     $mail->Body    = "Name: $name  $lastName <br/><br/>".
                      "Email: $email <br/><br/>".
                      "Phone: $phone <br/><br/>".
@@ -64,25 +71,22 @@ $mail = new PHPMailer(true);
                      "Details to the areas: $details \n\n";
                      
                      $sent=$mail->send();
-
                      if ($sent){
-                         $response=[
-                             'response'=>'Message has been sent',
-                             'status'=>200
-                         ];
-                     }
-                     else{
-                         $response=[
-                             'response'=>'Message has not been sent',
-                             'status'=>404
-                         ];
-                     }
-                 
-                     die(json_encode($response));
-                 
-                 
-                    // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-                 
-                 
-                 ?>
-                 
+                        $response=['response'=>'Message has been sent',
+                        'status'=>200
+                    ];
+                }
+                else{
+                    $response=[
+                        'response'=>'Message has not been sent',
+                        'status'=>404
+                    ];
+                }
+            
+                die(json_encode($response));
+
+               // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+
+            
+            ?>
+         

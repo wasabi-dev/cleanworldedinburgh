@@ -22,21 +22,21 @@ export default class Frame {
     form.append('preferedTime',this.data.preferedTime);
     form.append('street',this.data.street);
     form.append('typeClean',this.data.typeClean);
-
     fetch('email.php',{
       method:'POST',
       body:form
   }).then(res=>{
     return res.json();
   }).then(data=>{
-    if (data.response==='The message has been sent') {
-      this.showMessage(data.response,'notification-exit');
-      this.clean(); 
-     }
-     else{
-      this.showMessage(data.response,'notification-error');
-     }
-   });      
+    if(data.status===200){
+     this.showMessage(data.response,'notification-exit');
+     this.clean();
+    }
+    else{
+     this.showMessage(data.response,'notification-error');
+     this.clean();
+    }
+  });
 }
 
  showMessage(message,status){

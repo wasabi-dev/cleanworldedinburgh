@@ -1,12 +1,9 @@
-@font-face{
-   font-family: 'Open Sans';
-   src: url('OpenSans-Light.ttf'); 
-}
+@import url("https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,300;1,200&display=swap");
 
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif !important;
+    font-family: 'Muli', sans-serif;
 }
 body{
     background-color:#f5f7f4;
@@ -21,6 +18,7 @@ h1{
     margin: 0 auto;
     max-width: 800px;
 }
+
 a{
   color: white;
 }
@@ -216,52 +214,21 @@ label{
     color: #3f4b5e;
     margin: 0 0 30px;
 }
-
-.social-icons {
-  margin-left: 0.5em; 
-}
-  .social-icons a {
-    width: 43px;
-    height: 43px;
-    background: 2ce6a9;
-    color: white;
-    border-radius: 50%;
-    display: inline-block;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
-    opacity: 1; 
-    background-color: #2ce6a9;
-    padding: 1em; 
-    text-align: center;
-    line-height: 1;
-  }
-    .social-icons a i {
-      text-align: center;
-      display: block;
-      padding: 23px 0;
-      
-    }
-    .social-icons a:hover {
-      text-decoration: none;
-      background-color: #358474;
-      opacity: 0.6; }
-.fa {
-      display: inline-block;
-      font: normal normal normal 14px/1 FontAwesome;
-      text-rendering: auto;
-      }
 /* ==============================================================
    FOOTER
    ============================================================== */
    footer {
      display: block;
+     margin-top: 2em;
     background: #45d397;
     padding: 40px 0;
-    margin-top: 2em;
   }
   
   footer p {
+    color: white;
+    font-size: 1em;
+  }
+  footer a{
     color: white;
   }
   
@@ -275,29 +242,39 @@ label{
     color: #ffffff;
     margin-bottom: 22px;
   }
-  
-  .foot-box ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .foot-box ul li {
-    list-style: none;
-    color: #ffffff;
-    line-height: 2;
-  }
-  
-  .foot-box ul li a {
-    color: #ffffff;
-    line-height: 2;
-  }
-  
-  .subscribe h6 {
-    color: #ffffff;
-    margin-bottom: 22px;
-  }
 
- 
+  .social-icons {
+    margin-left: 0.5em;
+  }
+  
+  .social-icons a {
+    width: 43px;
+    height: 43px;
+    background: #2ce6a9;
+    color: white;
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 1;
+    padding: 1em;
+    line-height: 1;
+  }
+  
+  .social-icons a i {
+    text-align: center;
+    display: block;
+    padding: 13px 0;
+  }
+  
+  .social-icons a:hover {
+    text-decoration: none;
+    background-color: #358474;
+    opacity: 0.6;
+  }
+  
+
+    
 
 
 

@@ -29,7 +29,6 @@ $typeClean=$_POST['typeClean'];
 
 $mail = new PHPMailer(true);
 
-
     //Server settings
     $mail->SMTPDebug = 0;//SMTP::DEBUG_SERVER;                      // Enable verbose debug output
     $mail->isSMTP(); 
@@ -49,7 +48,7 @@ $mail = new PHPMailer(true);
 
     //Recipients
     $mail->setFrom($email, $name);
-    $mail->addAddress('info@cleanworldedinburgh.com', 'Clean World Edinburgh');     // Add a recipient
+    $mail->addAddress('info@cleanworldedinburgh.com', 'Cleanworldedinburgh');     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML

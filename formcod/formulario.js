@@ -2,9 +2,7 @@ export default class Frame {
   constructor(data) {
        this.data=data;
   }
-
   send(){    
-
     const form=new FormData();
     form.append('address',this.data.address);
     form.append('bedrooms',this.data.bedrooms);
@@ -41,36 +39,32 @@ export default class Frame {
   });
 }
 
-  showMessage(message,status){
-    const page=document.querySelector('body');
-    const dialog=document.createElement('div');
-    dialog.classList.add('notification',status);
-    dialog.textContent=message;
-    page.insertBefore(dialog, document.querySelector('.whatsapp'));
+ showMessage(message,status){
+  const page=document.querySelector('body');
+  const dialog=document.createElement('div');
+  dialog.classList.add('notification',status);
+  dialog.textContent=message;
+  page.insertBefore(dialog, document.querySelector('.whatsapp'));
+  dialog.classList.add('visible');
+  setTimeout(()=>{
     dialog.classList.add('visible');
-
     setTimeout(()=>{
-      dialog.classList.add('visible');
-
-      setTimeout(()=>{
-        dialog.classList.remove('visible');
-        setTimeout(() => {
-          dialog.remove();
-     }, 500);
-      },3000);
-    },100);
-    
-  }
-
-  clean(){
-    const fields=document.querySelectorAll('input,textarea,select');
-    fields.forEach(field=>{
-      field.value='';
-      field.classList.remove('exit');
-    })
-  }
-
+      dialog.classList.remove('visible');
+      setTimeout(() => {
+        dialog.remove();
+   }, 500);
+    },3000);
+  },100);
+  
 }
-    
-   
+clean(){
+  const fields=document.querySelectorAll('input,textarea,select');
+  fields.forEach(field=>{
+    field.value='';
+    field.classList.remove('exit');
+  })
+}
+}
 
+
+  

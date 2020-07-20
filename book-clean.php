@@ -17,8 +17,8 @@
     integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
 <!-- Main CSS -->
-    <link rel="stylesheet" href="/formcod/style.css">
-    <link rel="icon" href="/imagenes/favicon3.ico" />
+    <link rel="stylesheet" href="formcod/style.css">
+    <link rel="icon" href="imagenes/favicon3.ico" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162780618-3"></script>
 <script>
@@ -57,18 +57,23 @@
                                         <a class="dropdown-item" href="index.html#restaurant">Bars & Restaurants</a>
                                         <a class="dropdown-item" href="index.html#fleet">Vehicles</a>
                                         <a class="dropdown-item" href="index.html#team">Team</a>
-                                        <a class="dropdown-item" href="index.html#nebulization">Nebulization Disinfection</a>
                                         <a class="dropdown-item" href="index.html#about">About</a>
                                       </div>
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="ozono-cleaning.html">Ozone Cleaning </a>
+                                    <button class="btn  dropdown-toggle" data-toggle="dropdown">Disinfection Services </button>
+                                    <div class="dropdown">
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" data-toggle="collapse" data-target="#navbarNavDropdown">
+                                        <a class="dropdown-item" href="#ozone">Ozone Cleaning</a>
+                                        <a class="dropdown-item" href="#nebulization">Nebulization Disinfection</a>
+                                      </div>
+                                    </div>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="contact.html">Contact </a>
                                 </li>
-                                <li><a href="book-clean.html" class="btn btn-info">Book a Quote</a></li>
+                                <li><a href="book-clean.php" class="btn btn-info">Book a Quote</a></li>
                             </ul>
                             <div class="social-icons">
                                 <a href="https://www.facebook.com/CleanWorldEdinburghUK/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
@@ -95,7 +100,7 @@
 
         <!-------Personal details------>
         <div class="container">
-            <form action="email.php" id="frm" class="frm container">
+            <form action="" id="frm" class="frm container">
                 <div class="lbl"><label for="first-name" class="ml-3">Name*</label></div>
                 <div class="d-flex justify-content-center">
                     <input type="text" id="name" name="name" class="w-50 mr-1 pl-2 campo" placeholder="First name">
@@ -131,7 +136,6 @@
                         <label class="" for="defaultInline2">Disinfection Services</label>
                     </div>
                 </div>
-
                     <div class="lbl"><label for="hours" class="ml-3 mt-2">How many hours per clean? *</label></div>
                     <div class="d-flex justify-content-center mt-2">
                         <select name="hours" class="w-100 campo" id="hours">
@@ -295,7 +299,8 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
  integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
-    <script src="formcod/script.js" type="module"></script>
+<script src="formcod/script.js" type="module"></script>
+
     
 
 </body>

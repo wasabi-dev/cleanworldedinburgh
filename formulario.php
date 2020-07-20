@@ -24,7 +24,7 @@
 
 
         # FIX: Replace this email with recipient email
-        $mail_to = "info@netcytecno.com";
+        $mail_to = "info@cleanworldedinburgh.com";
         
         # Sender Data
         $subject = "You have a new message: ";

@@ -28,6 +28,9 @@ Author: Surjith S M
    botone en hover: #96e65d
    *******/
 /*******My styles********/
+body{
+  font-display: auto;
+}
 article.description {
   margin: 5em;
 }

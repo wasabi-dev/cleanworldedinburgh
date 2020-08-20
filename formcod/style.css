@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,300;1,200&display=swap");
-
+@font-face{
+  font-family: 'Open-Sans';
+  src: url("./OpenSans-Light.ttf");
+}
 *{
     margin: 0;
     padding: 0;
@@ -34,7 +37,7 @@ form input,select,textarea{
     font-variant: normal;
     font-size: 14px !important;
     line-height: 20px;
-    font-family: "open sans";
+    font-family: 'Open-sans';
     text-decoration: none;
     padding: 3px 0;
 }
@@ -111,7 +114,6 @@ label{
     color: black;
 }
 /*******************Mis estilos**************************/
-@import url("https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,300;1,200&display=swap");
 .header {
     position: -webkit-sticky;
     position: sticky;

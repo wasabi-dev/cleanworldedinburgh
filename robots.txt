@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /.vscode/
-Disallow: /*.php$
-
-Sitemap: https://www.cleanworldedinburgh.com/sitemap.xml

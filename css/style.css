@@ -295,7 +295,28 @@ section.video {
 section.video h2 {
   padding: 0.5em;
 }
-
+.banner-error{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  width: 100%;
+  background-image: url(../imagenes/banner-error.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.text-error{
+  padding: 4em;
+  text-align: center;
+}
+.text-error h3{
+  font-size: 3em;
+}
+.text-error p{
+  font-size: 1.5em;
+}
 /* ==============================================================
    GLOBAL STYLES
    ============================================================== */

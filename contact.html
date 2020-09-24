@@ -122,7 +122,12 @@
                     class="form-control" name="message" id="message"
                     cols="30" rows="5"></textarea>
             </div>
-            <div class="form-group">
+            <button class="g-recaptcha" 
+        data-sitekey="6LfFBNAZAAAAAK0Z1TOYy0sTvi4fZj8wHnH2jrIh" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
+
+      <div class="form-group">
                 <button class="btn btn-form" type="submit">
                     Send
                 </button>
@@ -180,7 +185,7 @@
 </footer>
 <div class="whatsapp">
     <a href="https://wa.me/447427042113?text=Hi!%20I'm%20intersting%20in...%20" target="_blank">
-    <img src="./imagenes/whatsapp.png"></a>
+    <img class="what" src="./imagenes/whatsapp.png"></a>
 </div>
     
 <!--//END FOOTER -->
@@ -191,5 +196,6 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </body>
 </html>

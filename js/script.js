@@ -104,5 +104,10 @@ document.addEventListener('click', function chnageCount(evt) {
             break;
     }
 });
+/************reCaptcha *************/
+function onSubmit(token) {
+    document.getElementById("demo-form").submit();
+  }
+
 
     
